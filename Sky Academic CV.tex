@@ -1,0 +1,597 @@
+% --- LaTeX CV Template - S. Venkatraman ---
+
+% --- Set document class and font size ---
+
+\documentclass[letterpaper, 11pt]{article}
+
+% --- Package imports ---
+
+\usepackage{hyperref, enumitem, longtable, amsmath, array}
+\usepackage{fontawesome5}  % For social media icons
+\usepackage{graphicx}     % For image handling
+
+% --- Page layout settings ---
+
+% Set page margins
+\usepackage[left=0.7in, right=0.8in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.2}
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+
+% --- Page formatting settings ---
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{colorlinks=true, linkcolor=MidnightBlue, urlcolor=MidnightBlue}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+% Define font size and color for section headings
+\newcommand{\headingfont}{\Large\color{OliveGreen}}
+
+% --- CV section settings ---
+
+% Note: each section of this table (Education, Awards, Publications etc.) is 
+% stored in a two-column table. The left-hand column is narrow (1 inch) and is 
+% meant to store dates. The right-hand column is wide (5.2 inches) and stores 
+% the main text.  Sections in which each entry might have multiple lines 
+% (e.g., Education) are stored in a 'SectionTable' environment). Sections in 
+% which each entry might just have one line are stored in a 'SectionTableSingleSpace'
+% environment. The only difference between the two environments is the line 
+% spacing between each entry. Both environments take one argument, which is the
+% title of the section. See main document for how these environments are used.
+
+% Define settings for left-hand column in which dates are printed
+\newcolumntype{R}{>{\raggedleft}p{1in}}
+
+% Define 'SectionTable' environment
+\newenvironment{SectionTable}[1]{
+	\renewcommand*{\arraystretch}{1.7}
+	\setlength{\tabcolsep}{10pt}
+	\begin{longtable}{Rp{5.2in}} & #1 \\}
+{\end{longtable}\vspace{-.3cm}}
+
+% Define 'SectionTableSingleSpace' environment
+\newenvironment{SectionTableSingleSpace}[1]{
+	\renewcommand*{\arraystretch}{1.2}
+	\setlength{\tabcolsep}{10pt}
+	\begin{longtable}{Rp{5.2in}} & #1 \\[0.6em]}
+{\end{longtable}\vspace{-.3cm}}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% --- Name and contact information ---
+
+\begin{SectionTable}{\Huge Sky (Kehan) Sheng} & 
+skysheng7@gmail.com  $\;\boldsymbol{\cdot}\;$ 
++1 778-681-9736 $\;\boldsymbol{\cdot}\;$ Vancouver, BC, Canada\newline
+\socialicon{\faLinkedin} \href{www.linkedin.com/in/sky-sheng}{sky-sheng} $\;\boldsymbol{\cdot}\;$
+\socialicon{\faGithub} \href{https://github.com/skysheng7}{skysheng7} $\;\boldsymbol{\cdot}\;$
+\socialicon{\faGraduationCap} \href{https://scholar.google.com/citations?user=yz-cWVgAAAAJ}{Kehan (Sky) Sheng}
+$\;\boldsymbol{\cdot}\;$ 
+\socialicon{\faOrcid} \href{https://orcid.org/0000-0001-6442-5284}{0000-0001-6442-5284} 
+\end{SectionTable}
+
+% --- Section: Research interests ---
+\begin{SectionTable}{\headingfont Research Interests}
+& My research lies at the intersection of \textbf{animal welfare science}, \textbf{data science} and \textbf{AI ethics}. My previous research focused on advancing automated methods for behavior monitoring, redefining dominance hierarchy calculations, creating novel approaches for lameness detection, and understanding behavioral baselines for individual animals from sensor data. Currently, my work explores the representation bias of livestock farming in generative AI. I strive to make my research fully reproducible and accessible to all.
+\end{SectionTable}
+
+% --- Section: Education ---
+\begin{SectionTable}{\headingfont Education}
+2020/9 -- Present & 
+\textbf{University of British Columbia} -- Vancouver, BC, Canada \newline
+PhD in Applied Animal Biology with specialization in Data Science \newline 
+Supervisors: Dr. Marina von Keyserlingk, Dr. Dan Weary, Dr. Tiffany Timbers \newline
+Areas: Animal Welfare Science, Data Science, Computer Science and Statistics \newline
+\textit{Average: 91\%} \newline
+Relevant Coursework: Machine Learning and Data Mining, Algorithms and Data Structures, Linear Algebra \\
+
+2017/9 -- 2020/5 & 
+\textbf{University of Wisconsin - Madison} -- Madison, WI, USA \newline
+Bachelor of Science in Animal Science \newline 
+Certificate in Computer Science \newline 
+Supervisors: Dr. Guilherme Rosa, Dr. Jennifer Van Os \newline
+\textit{GPA: 3.97/4.0} \newline
+Honors: Dean's List (2017-2020), Distinctive Scholastic Achievement \newline
+Relevant Coursework: Matrix Methods in Machine Learning, Programming in Java, Human Computer Interactions, Discrete Mathematics, Introduction to Computer Engineering, Statistics and Computation in R \\
+\end{SectionTable}
+
+% --- Section: Projects ---
+\begin{SectionTable}{\headingfont Open-source Projects}
+2025/2 -- 2025/6 &
+\textbf{\href{https://skysheng7.github.io/moo4feed/}{R package: moo4feed}} \socialicon{\faGithub}  \newline
+moo4feed is an R package designed to extract novel individual-level traits from raw feeding and drinking data collected through precision livestock farming systems. The package aims to support animal welfare research and data-driven monitoring by enabling reproducible, scalable analysis workflows. \\
+2024/10 -- 2025/2 &
+\textbf{\href{https://github.com/skysheng7/AI_bias_in_farming.git}{AI's representation bias about livestock farming}} \socialicon{\faGithub}  \newline
+To evaluate text-to-image generative AI's depiction of how farm animals are raised, I designed 48 prompts and created 4800 dairy and pig farm images using DALL-E 3. This study reveals that DALL-E 3 is systematically biased towards romanticizing livestock farming as dairy cows grazing on pasture and pigs rooting in mud, even when explicitly prompted for realistic depictions. When automatic prompt revision was disabled, the generated images better reflected modern intensive farming practices. While prompt revision was implemented to mitigate bias, it paradoxically erased intensive farming reality and misled the public to believe that farmed animals live extensively. The analysis is fully reproducible via a customized Docker image and GNU Make workflow. \\
+2023/1 -- 2024/3 &
+\textbf{\href{https://github.com/skysheng7/competition_dominance_analysis}{Competition Dominance Analysis}} \socialicon{\faGithub}  \newline
+This thoroughly documented and well-organized R project uses a Bayesian statistical framework to examine how feed competition influences the structure of dominance hierarchies in dairy cattle. I used an algorithm to automatically detect displacement behaviors at the feeder, analyzing data from 159 cows over a 10-month period. This study is the first to demonstrate that high competition periods are linked to a flattening of the dominance hierarchy, driven by subordinate cows becoming more successful at displacing herd mates when access to resources is limited. Our findings suggest that dominance hierarchies based on agonistic behaviors during high-competition periods better reflect cows’ motivation for fresh feed rather than their inherent dominance traits. \\
+2023/7 -- 2025/2 &
+\textbf{\href{https://github.com/skysheng7/lameness_hierarchy}{Lameness Hierarchy}} \socialicon{\faGithub} \newline
+This project integrates Python, R, and HTML/CSS/JavaScript to develop an innovative lameness assessment tool for dairy cows using Amazon MTurk. Lameness in dairy cows is a painful condition that affects their ability to walk normally. Similar in concept to the \text{\href{https://lmarena.ai/}{chatbot arena}} for ranking generative AI models, our system ranks cows based on the severity of lameness. Crowd workers perform pairwise comparisons judging which cow is more lame when watching two cows walking side by side, and the results are analyzed using the Elo-rating method within a Bayesian framework to rank cows from the most healthy to the most lame. This approach enables early detection of mobility issues, supports timely treatment, and reduces prolonged pain. The results demonstrated that untrained crowd workers can achieve accuracy comparable to trained experts. Additionally, a subsampling algorithm reduces the number of required comparisons while maintaining ranking accuracy, providing a scalable, cost-effective solution for generating high-quality training datasets to improve automated lameness detection models.\\
+2024/2 -- 2024/7 &
+\textbf{\href{https://github.com/skysheng7/welfare_assess_GPT4o}{Welfare Assessment using GPT-4o}} \socialicon{\faGithub} \newline
+This project, developed in Python and R, evaluates cow welfare through automated image analysis using GPT-4o and the Segment Anything Model (SAM). This study investigated whether GPT-4o can achieve expert-level accuracy in assessing cow cleanliness (hind leg, hindquarter, udder) after being provided with the Welfare Quality Protocol manual and two example images per category. To enhance accuracy, I explored different prompting strategies and image processing techniques, such as applying bounding boxes to highlight areas of interest and using segmentation to isolate specific body parts. Data analysis showed that segmentation and bounding boxes improved model performance by reducing bias towards labeling cows as dirty. This approach highlights the potential of AI-driven visual assessments for more efficient and real-time animal welfare evaluations. \\
+2022/9 -- 2022/12 &
+\textbf{\href{https://github.com/skysheng7/Lameness-prediction-ML.git}{Lameness Prediction through Machine Learning}} \socialicon{\faGithub} \newline
+This project applies various machine learning methods, including Support Vector Machines, Random Forest, K-Nearest Neighbors, and Logistic Regression, to predict lameness in dairy cows based on behavioral data. Using data from 34 lame and 100 healthy cows over 10 months, we analyzed the impact of data preprocessing techniques such as undersampling, feature selection, and dimensionality reduction on model performance. The study demonstrated that weekly aggregated data and balanced sampling significantly improve predictive accuracy. This work highlights the potential of machine learning for early, automated lameness detection in precision livestock farming. \newline
+\textit{Note: This GitHub repository is private as the associated paper has not been published yet. Please email me to request private access.} \\
+\end{SectionTable}
+
+% --- Section: Publications ---
+
+\begin{SectionTable}{\headingfont Publications}
+2025 & 
+\textbf{{The erasure of intensive livestock farming in text-to-image generative AI}} \newline
+\textbf{Sheng, K.}, Tuyttens, F.A.M., von Keyserlingk, M.A.G. \newline
+\textit{arXiv preprint:2502.19771. }\text{\href{https://doi.org/10.48550/arXiv.2502.19771}{https://doi.org/10.48550/arXiv.2502.19771}}  \\
+2025 &
+\textbf{{Redefining Lameness Assessment: Constructing Lameness Hierarchy using Crowd-Sourced Data}} \newline
+\textbf{Sheng, K.}, Foris, B., von Keyserlingk, M.A.G., Timbers, T.A., Cabrera, V., Weary, D.M. \newline
+\textit{Computers and Electronics in Agriculture. }\text{\href{https://doi.org/10.1016/j.compag.2025.110206}{https://doi.org/10.1016/j.compag.2025.110206}}\\
+2024 & 
+\textbf{{Redefining dominance calculation: Increased competition flattens the dominance hierarchy in dairy cows}} \newline
+\textbf{Sheng, K.}, Foris, B., Krahn, J., Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{Journal of Dairy Science}, 107(9): 7286-7298. \text{\href{https://doi.org/10.3168/jds.2023-24587}{https://doi.org/10.3168/jds.2023-24587}} \\
+2023 & 
+\textbf{{Crowd sourcing remote comparative lameness assessments for dairy cattle}} \newline
+\textbf{Sheng, K.}, Foris, B., von Keyserlingk, M.A.G., Gardenier, J., Clark, C., Weary, D.M. \newline
+\textit{Journal of Dairy Science}, 106(8): 5715-5722. \text{\href{https://doi.org/10.3168/jds.2022-22737}{https://doi.org/10.3168/jds.2022-22737}}\\
+2024 & 
+\textbf{{Automated, longitudinal measures of drinking behavior provide insights into the social hierarchy in dairy cows}} \newline
+Foris, B., Vandresen, B., \textbf{Sheng, K.}, Krahn, J., Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{JDS Communications}, 5(5): 411-415. \text{\href{https://doi.org/10.3168/jdsc.2023-0487}{https://doi.org/10.3168/jdsc.2023-0487}}\\
+2024 & 
+\textbf{{Effects of group size on agonistic interactions in dairy cows: a descriptive study}} \newline
+Krahn, J., Foris, B., \textbf{Sheng, K.}, Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{Animal}, 18(3): 101083. \text{\href{https://doi.org/10.1016/j.animal.2024.101083}{https://doi.org/10.1016/j.animal.2024.101083}}
+\end{SectionTable}
+
+
+% --- Section: Conference Publications ---
+\begin{SectionTable}{\headingfont Conference Publications}
+2025 & 
+\textbf{The erasure of intensive livestock farming in text-to-image generative AI} (Oral Presentation) \newline
+\textbf{Sheng, K.}, Tuyttens, F.A.M., von Keyserlingk, M.A.G. \newline
+\textit{ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)}, Athens, Greece. \\
+2024 & 
+\textbf{Redefining lameness assessment using crowd-sourced data} (Oral Presentation) \newline
+\textbf{Sheng, K.}, Foris, B., von Keyserlingk, M.A.G., Timbers, T.A., Cabrera, V., Weary, D.M. \newline
+\textit{The 75th European Federation for Animal Science (EAAP) Annual Meeting}, Florence, Italy. \\
+2024 & 
+\textbf{Cow welfare assessment using ChatGPT Vision} (Poster Presentation) \newline
+\textbf{Sheng, K.}, Heydarirad, M., Foris, B. \newline 
+\textit{The 9th International Conference on the Welfare Assessment of Animals at Farm Level (WAFL)}, Florence, Italy. \\
+2024 & 
+\textbf{Automatically monitoring dyadic relationships in dairy cows} (Oral Presentation) \newline
+Foris, B., \textbf{Sheng, K.}, Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{The 75th European Federation for Animal Science (EAAP) Annual Meeting}, Florence, Italy. \\
+2023 & 
+\textbf{Remote Comparative Lameness Assessment in Dairy Cattle: A Crowdsourcing Approach} (Oral Presentation) \newline
+\textbf{Sheng, K.}, Foris, B., von Keyserlingk, M.A.G., Gardenier, J., Clark, C., Weary, D.M. \newline
+\textit{The American Dairy Science Association (ADSA) Annual Meeting}, Montreal, QC, Canada. \\
+2023 & 
+\textbf{Effect of group composition on agonistic interactions received by subordinate cows: A pilot study} (Poster Presentation) \newline
+Krahn, J., Foris, B., \textbf{Sheng, K.}, Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{The American Dairy Science Association (ADSA) Annual Meeting}, Montreal, QC, Canada. \\
+2022 & 
+\textbf{The Effects of Competition at the Feeder on Dominance in Dairy Cows} (Oral Presentation) \newline
+\textbf{Sheng, K.}, Foris, B., Krahn, J., Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{The 73th European Federation for Animal Science (EAAP) Annual Meeting}, Porto, Portugal. \\
+2022 & 
+\textbf{Effects of group size on the social experience of dairy cows} (Poster Presentation) \newline
+Krahn, J., Foris, B., \textbf{Sheng, K.}, Weary, D.M., von Keyserlingk, M.A.G. \newline
+\textit{The 55th Congress of the International Society of Applied Ethology (ISAE)}, Ohrid, North Macedonia. \\
+2019 & 
+\textbf{Behavioral response of dairy cows after subcutaneous insertion of real-time temperature detecting biosensor: A pilot study} (Poster Presentation)\newline
+\textbf{Sheng, K.}, Reuscher, K., Chung, H., Choi, C., Kim, Y., Brounts, S., Van Os, J. \newline
+\textit{The American Dairy Science Association (ADSA) Annual Meeting}, Cincinnati, OH, USA.
+\end{SectionTable}
+
+% --- Section: Research Funding ---
+\begin{SectionTableSingleSpace}{\headingfont Research Funding}
+& \textit{Total research funding secured: \$72,254 CAD + \$2,000 USD} \\[6pt]
+2024 -- 2025 &
+Mary and David Macaree Fellowship (\$3,195 CAD) \newline
+\textit{Research on crowd-sourced pairwise lameness assessment for dairy cattle}. \\
+2024 -- 2025 &
+Pei-Huang Tung and Tan-Wen Tung Graduate Fellowship (\$3,550 CAD) \newline 
+\textit{Research on developing novel lameness assessment methods using Elo-rating}. \\
+2024 -- 2025 &
+Hugo E Meilicke Memorial Fellowship (\$12,450 CAD) \newline
+\textit{Research on automated methods for cattle lameness detection}. \\
+2023 -- 2024 &
+John and Mary Young Scholarship (\$1,825 CAD) \newline
+\textit{Development of automated system for behavioral monitoring}. \\
+2023 -- 2024 &
+Elizabeth R Howland Fellowship Award (\$1,761 CAD) \newline
+\textit{Research on cattle behavioral plasticity and personality}. \\
+2022 -- 2023 &
+Wilson Henderson Fellowship (\$12,250 CAD) \newline
+\textit{Research on comparative lameness assessment methods}. \\
+2022 -- 2023 &
+Elizabeth R Howland Fellowship Award (\$2,872 CAD) \\
+2021 -- 2022 &
+James A. Shelford Memorial Scholarship (\$1,380 CAD) \\
+2021 -- 2022 &
+Pei-Huang Tung and Tan-Wen Tung Graduate Fellowship (\$16,000 CAD) \\
+2020 -- 2021 &
+Elizabeth R Howland Fellowship (\$16,000 CAD) \\
+2020 -- 2021 &
+James A. Shelford Memorial Scholarship (\$971 CAD) \\
+2019 -- 2020 &
+Farrington Undergraduate Research Award (\$2,000 USD) \newline
+\textit{Research on behavioral responses of dairy cows to temperature monitoring devices}
+\end{SectionTableSingleSpace}
+
+% --- Section: Awards, scholarships, etc ---
+\begin{SectionTableSingleSpace}{\headingfont Honors, Awards and Scholarships}
+2025 &
+ACM Conference on Fairness, Accountability, and Transparency (FAccT) Travel Support (\$1308.2 USD) \\
+2025 &
+UBC Land and Food Systems Graduate Student Conference -- \textbf{Second Place} in Oral Presentation (\$125 CAD) \\
+2024 & 
+pyOpenSci Fall Festival Scholarship (\$350 CAD)  \\
+2024 & 
+Ursula Knight Abbott Travel Scholarship (\$1,750 CAD) \\
+2022 -- 2025 & 
+President's Academic Excellence Initiative PhD Award (Total: \$3,985 CAD) \newline
+\textit{Awarded for 4 consecutive terms (\$950 -- 1080 CAD per winter term, \$350 -- 500 CAD per summer term)} \\
+2022 & 
+Ursula Knight Abbott Travel Scholarship (\$1,500 CAD) \\
+2022 & 
+Graduate Student Travel Award (\$500 CAD) \\
+2022 & 
+EAAP Early Career Researcher Award -- \textbf{First Place} in Oral Presentation \\
+2021 & 
+Dairy Farmers of Canada My Dairy Research Student Competition -- \textbf{First Place} (\$1,500 CAD) \newline
+\textit{Won for innovative research and animated video presentation on cattle lameness detection: \href{https://youtu.be/HDe4uR7Tz9M?si=zMK2LjNmSAS5C4Mj}{Cyborg Lameness Assessors}} \\
+2020 -- 2025 & 
+International Tuition Award (Total: \$15,995 CAD) \newline
+\textit{Awarded for 10 consecutive terms (\$2,133 CAD per winter term, \$1,066 CAD per summer term)} \\
+2022 -- 2025 & 
+Animal Welfare Program Travel Award (Total: \$4,000 CAD) \newline
+\textit{Awarded for 4 consecutive years (\$1,000 CAD per accepted conference)} \\
+2020 & 
+College of Agricultural and Life Sciences Senior Award (\$500 USD) \newline
+\textit{Recognition as one of five outstanding senior students} \\
+2020 & 
+Farm Credit/MANRRS VIP Scholarship (\$2,000 USD) \newline
+\textit{Recognition for outstanding minorities in agriculture} \\
+2019 & 
+Dorothy Strong Scholarship (\$1,500 USD) \\
+2019 & 
+ADSA Undergrad Research Poster Competition -- \textbf{Third Place} (\$50 USD) \\
+2019 & 
+Agriculture Future of America Leaders Scholarship (\$1,000 USD) \\
+2018 & 
+Ruth and Carl Miller Academic Merit Award (\$1,125 USD) \\
+2018 & 
+Agriculture Future of America Travel Grant (\$1,000 USD) \\
+2017 -- 2020 & 
+University of Wisconsin-Madison Dean's List \newline
+\textit{Awarded consecutively for three years} \\
+2015 & 
+ShanghaiTech Small Satellite Design Competition -- \textbf{Third Place} (1,000 CNY) \\
+2015 & 
+Extraordinary Student Scholarship (6,250 CNY) \\
+2015 & 
+National English Speech Competition -- \textbf{Third Place}
+\end{SectionTableSingleSpace}
+
+
+% --- Section: Teaching experience ---
+\begin{SectionTable}{\headingfont Teaching Experience}
+Spring 2025 & 
+\textbf{Guest Lecturer, Career Exploration Course} \newline 
+\textit{Vancouver Independent School of Science and Technology (VISST)}\newline
+Taught a lecture about AI bias and animal welfare focusing on the topic of "How AI Sees Farm Animals: Whose Stories Are Lost?". \\
+Spring 2025 & 
+\textbf{Tutorial on Linux Command Using Amazon Web Services (AWS) Elastic Compute Cloud (EC2)} \newline 
+\textit{University of British Columbia Master of Data Science Program (UBC MDS)}\newline
+Designed and taught a hands-on AWS EC2 tutorial where participants learned to set up EC2 instances, use SSH with key-based authentication, and master Linux commands through a creative rescue mission. Students helped free Ollie the Otter from a digital dungeon using Linux commands for directory navigation, permission changes, and file management in a cloud environment. This approach made technical concepts stick as participants solved problems with purpose, turning dry command-line instructions into a memorable adventure with Ollie in AWS infrastructure. Tutorial enrollment: 40 students. \\
+Spring 2025 & 
+\textbf{Teaching Assistant, DSCI 525: Web and Cloud Computing} \newline 
+\textit{UBC MDS}\newline
+Supported student learning in cloud computing, parallel computing, and APIs. Assisted students in exploring web services for scalable computing, web publication, web hosting, and data collection. Course enrollment: 116 students. \\
+Spring 2025 & 
+\textbf{Teaching Assistant, DSCI 553: Statistical Inference and Computation II} \newline
+\textit{UBC MDS} \newline
+Guided students in learning prior-to-posterior Bayesian paradigm, focusing on multiple hypothesis testing, false discovery rate, and two-group comparisons. Course enrollment: 116 students. \\
+Spring 2025 & 
+\textbf{Teaching Assistant, DSCI 524: Collaborative Software Development} \newline
+\textit{UBC MDS} \newline
+Instructed on collaborative software development techniques, including software life cycle, unit testing, continuous integration, python packaging and R packaging for distribution. Course enrollment: 116 students. \\
+Fall 2024 & 
+\textbf{Teaching Assistant, DSCI 522: Data Science Workflows} \newline
+\textit{UBC MDS} \newline
+Guided students through building reproducible and trustworthy data science workflow, focusing on reproducibility, project management, version control, the use of Docker container, and automated workflows. Course enrollment: 116 students. \\
+Fall 2024 & 
+\textbf{Teaching Assistant, DSCI 552: Statistical Inference and Computation I} \newline
+\textit{UBC MDS} \newline
+Supported students in understanding foundations of frequentist statistical inference, simulation-based approaches and  computations. Course enrollment: 116 students. \\
+Fall 2024 & 
+\textbf{Guest Lecturer, CCV868: Special Topics in Veterinary Clinics and Surgery} \newline
+\textit{Universidade Federal de Minas Gerais} \newline
+Delivered lecture on "Lameness in Dairy Cows: Causes, Detection, and Ethical Dilemmas in an Intensive System". Lecture focused on automated lameness detection methods. Course enrollment: 16 students. \\
+Spring 2024 & 
+\textbf{Guest Lecturer, APBI 315: Animal Welfare and Ethics of Animal Use} \newline
+\textit{UBC} \newline
+Delivered lecture on AI's bias about livestock farming. Course enrollment: 100 students. \\
+Fall 2021 & 
+\textbf{Teaching Assistant, APBI 314: Animals and Society} \newline
+\textit{UBC} \newline
+Assistant student learning on the welfare of wildlife, livestock and lab animals. Managed weekly discussions and student assignments. Course enrollment: 96 students.
+\end{SectionTable}
+
+
+% --- Section: Employment ---
+\begin{SectionTable}{\headingfont Employment}
+2023/4 -- present &
+ \textbf{Vancouver Independent School of Science and Technology}  \newline
+\text{\href{https://www.visst.ca/past-camps/machinelearningsummer}{Machine Learning and AI Instructor}} -- Vancouver, BC, Canada \newline
+\textbullet\, Taught high school students (11-16 years old) an introduction to machine learning for two consecutive summers, covering concepts like decision trees, metrics, computer vision, natural language processing, reinforcement learning, generative AI and AI ethics. \\
+2018/9 -- 2020/7 &
+\textbf{Dairy Science Department, University of Wisconsin-Madison} \newline
+\text{\href{https://animalwelfare.cals.wisc.edu/directory/sky-sheng/}{Undergraduate Research Assistant}} -- Madison, WI, United States \newline
+\textbullet\, Created an R script to analyze standing and lying behavior of dairy cows using HOBO data logger. Upgraded lying and standing analysis algorithms in SAS. \newline
+\textbullet\, Evaluated behavioral responses of dairy cows after subcutaneous insertion of real-time temperature detecting microchips.  \newline
+\textbullet\, Conducted behavioral observations and respiration rate recordings. \newline
+\textbullet\, Performed rigorous data cleaning, error checking, and data loading. \newline
+\textbullet\, Worked under the supervision of Principal Investigator Jennifer Van Os, Ph.D. \\
+2019/5 -- 2019/7 &
+\textbf{StoneX Group Inc.} \newline
+\text{Data Analyst Intern – Financial Sector} -- Kansas City, MO, United States \newline
+\textbullet\, Created a color gradient map in R to visualize planting delay degrees, supporting market analysis for agricultural trading. \newline
+\textbullet\, Developed an Excel VBA tool to automate trade information uploads to an SQL database, improving data entry efficiency. \newline
+\textbullet\, Gained experience in big data analytics, data cleaning, and financial data visualization.\\
+2017/11 -- 2018/7 &
+\textbf{Large Animal Veterinary Hospital, University of Wisconsin-Madison} \newline
+\text{Barn Crew Member} -- Madison, WI, United States \newline
+\textbullet\, Performed animal health observation, cleaned stalls, and fed animals daily. \newline
+\textbullet\, Gained hand-dripping and machine milking experience with dairy cows. \newline 
+\textbullet\, Handled various animals including cows, horses, donkeys, camels, sheep, and pigs. \\
+2017/10 -- 2018/4 &
+\textbf{Wisconsin National Primate Research Center} \newline
+\text{Colony Management Member} -- Madison, WI, United States \newline
+\textbullet\, Administered medication treatments, including drawing blood samples and performing intramuscular and subcutaneous injections to macaques. \newline
+\textbullet\, Fed infant and adult macaques, cleaned cages, checked drinkers and IDs, and performed daily animal health observations. \\
+2017/5 -- 2017/7 &
+\textbf{Education First} \newline
+\text{Marketing Intern \& Group Leader} -- Yantai, Shandong, China \newline
+\textbullet\, Talked with potential customers and advertised English education products. \newline
+\textbullet\, Taught team members how to identify target customers, explore customer needs, and respond to customer inquiries. \\
+\end{SectionTable}
+
+% --- Section: Presentations without Conference Proceedings ---
+\begin{SectionTable}{\headingfont Presentations without Conference Proceedings}
+2025 &
+The erasure of intensive livestock farming in text-to-image generative AI \newline
+\textit{UBC LFS Graduate Student Conference}, Vancouver, BC, Canada \\
+2024 &
+\text{\href{https://youtu.be/JK5KQREPszo?si=NvzjtJG38wYYyUme}{Technology on Dairy Farms and Animal Welfare: Framing and Potential}} \newline
+\textit{International Dairy Federation (IDF) Webinar Series (Invited Presentation)}, Virtual \\
+2023 &
+Automatic Longitudinal Lameness Assessment for Dairy Cows \newline
+\textit{Western Canadian Certified Hoof Trimmers Associations Meeting (Invited Presentation)}, Red Deer, AB, Canada \\
+2023 &
+AI for Animal Welfare \newline
+\textit{Evergreen College Visit to UBC}, Vancouver, BC, Canada \\
+2023 &
+\text{\href{https://youtu.be/0InpGrLFn58?si=cC9fnXS5-GHOozwt}{Comparative Lameness Assessments for Dairy Cows on Amazon}} \newline
+\textit{UBC-Animal Welfare Program Industrial Research Chair (IRC) Meeting}, Virtual \\
+2023 &
+Identifying Lame Cows through Crowd-Sourcing \newline
+\textit{Chinese Animal Welfare Conference (Invited Presentation)}, Chongqing, Changsha, China \\
+2023 &
+\text{\href{https://youtu.be/GgJhx2bDHe8?si=uQRShONZpzWjIAGl}{Lameness Hierarchy of Dairy Cows}} \newline
+\textit{UBC-Animal Welfare Program Industrial Research Chair (IRC) Meeting}, Vancouver, BC, Canada \\
+2023 &
+Lameness Assessment of Dairy Cows \newline
+\textit{Prime Acres Open Farm Day}, Abbotsford, BC, Canada \\
+2022 &
+The Impact of Resource Competition on the Dominance Hierarchy of Dairy Cows \newline
+\textit{International Farm Animal Welfare Fellowship (IFAWF) Webinar (Invited Presentation)}, Virtual \\
+2021 &
+Cyborg Lameness Assessors for Dairy Cows \newline
+\textit{UBC LFS Graduate Student Conference}, Vancouver, BC, Canada \\
+2021 &
+\text{\href{https://youtu.be/K_dDDRj5vIg?si=xpsegK5iiQr3hRle}{Cyborg Lameness Assessors: Is This the Future for Dairy Cattle Lameness Assessments?}} \newline
+\textit{Dairy Farmers of Canada My Dairy Research Student Competition}, Virtual \\
+2020 &
+Improve Dairy Cattle Welfare with the Use of Technology \newline
+\textit{Evergreen College Visit to UBC}, Vancouver, BC, Canada \\
+2020 &
+Lameness Detection with the Use of Amazon MTurk \newline
+\textit{UBC-Animal Welfare Program Industrial Research Chair (IRC) Meeting}, Vancouver, BC, Canada \\
+2019 &
+Behavioral Responses of Dairy Cows After Subcutaneous Insertion of Real-Time Temperature Detecting Microchips \newline
+\textit{University of Wisconsin-Madison Animal Science Department Meetings \& Undergraduate Research Symposium}, Madison, WI, United States \\
+2019 &
+Opportunities in the US Agriculture Industry \newline
+\textit{University of Wisconsin-Madison CSSA Meeting (Invited Presentation)}, Madison, WI, United States \\
+\end{SectionTable}
+
+% --- Section: Podcast Interviews ---
+\begin{SectionTable}{\headingfont Podcast Interviews}
+2024/12 &
+\href{https://agrigates.io/the-livestack-podcast-episode-21-exploring-agritech-data-standards-and-improved-animal-welfare/}{Exploring Agritech, Data Standards, and Improved Animal Welfare} \newline
+\textit{The Livestack Podcast: Episode 21}, Interviewed by Daniel Foy, the CEO of AgriGate \newline
+Discussed potential benefits and risks of using AI and Precision Livestock Farming (PLF) to automate animal welfare assessment. This podcast was the top 5 most popular ones on the platform in 2024, reached key stakeholders in agricultural technology and animal science. \\
+2024/6 &
+\href{https://www.xiaoyuzhoufm.com/episode/665f3a85b9bead9fb0b78038?s=eyJ1IjoiNWZhY2EwOWZlMGY1ZTcyM2JiYzNh}{Evaluating Common Practices in Pig and Dairy Farming from an Animal Welfare Perspective} \newline
+\textit{The Road of Tomorrow Podcast: vol.67}, Interviewed by Jing Feng \newline
+Explored controversial practices in modern farming, and addressed ethical and practical aspects of animal husbandry. Podcast reached over 10,600 listeners in 4 months. \\
+\end{SectionTable}
+
+% --- Section: Mentorship ---
+\begin{SectionTable}{\headingfont Mentorship}
+2025/4 -- 2025/6 &
+\textbf{Colombe Tolokin, Nicole Lopez (Master's Student in Data Science, University of British Columbia)} \newline
+Supervised the development of R package `moo4feed`, which is designed to extract individual animal traits from sensor data\\
+2024/9 -- 2025/1 &
+\textbf{Victoria Portela Diniz Gaia (Master's Student in Animal Science, Universidade de São Paulo)} \newline
+Co-supervised research on developing an R package for lying and standing behavior monitoring using HOBO sensors. \\
+2024/1 -- 2024/8 &
+\textbf{Mahshid Heydarirad (Undergraduate Student in Applied Animal Biology, University of British Columbia)} \newline
+Supervised Mahshid in conducting a research project on cow welfare assessment using ChatGPT Vision. Mahshid assisted in sorting, labeling, and cleaning images for welfare assessment of dairy cows. I guided her through exploratory analysis and prompt engineering using OpenAI GPT-4o model. \\
+2022/5 -- 2024/8 &
+\textbf{Kay Yang (Undergraduate Student in Biology, University of British Columbia)} \newline
+Supervised research on feeding strategies of dairy cows. Project investigated how dynamic temporal and spatial competition influences feeding behaviors across 159 lactating Holstein cows over a 10-month period. Kay is currently pursuing veterinary medicine degree at University of Saskatchewan. \\
+2022/5 -- 2023/12 &
+\textbf{Kratika Rathi (Undergraduate Honours Student in Statistics, University of British Columbia)} \newline
+Guided Kratika in the development of a statistical model to analyze the repeatability and predictability of feeding behaviors in dairy cows. \\
+2023/5 -- 2023/8 &
+\textbf{Charlie He (Undergraduate Student in Computer Science, University of British Columbia)} \newline
+Supervised a computer science project on fine-tuning YOLO-v8 model to automatically identify dairy cattle based on unique body patterns, achieving 98\% accuracy on the test set. Charlie is currently pursuing a PhD at University of British Columbia. \\
+2023/9 -- 2023/12 &
+\textbf{Andrew Tran (Undergraduate Student in Computer Science, University of British Columbia)} \newline
+Supervised a computer science project on automatic video quality classification using YOLO-v8 model. Andrew is currently working as a Software Engineer at Amazon. \\
+2022/5 -- 2023/8 &
+\textbf{Sora Jeong (Undergraduate Student in Cognitive Science, University of British Columbia)} \newline
+Guided Sora is programming and running statistical analysis on pairwise lameness comparison results in R. Co-supervised her on a research project examining resource use and social dynamics in group-housed dairy cows. Research focuses on the interplay between individual traits, personality, and dominance status. \\
+2021/1 -- 2021/5 &
+\textbf{Marriam Dia (Undergraduate Student in Applied Animal Biology, University of British Columbia)} \newline
+Supervised research project validating R scripts for assessing lying and standing behaviors of dairy cows using HOBO sensors. Marriam is currently working as an International Concierge Agent. \\
+2022/5 -- 2022/7 &
+\textbf{Jiwei Hu, Kristin Bunyan, Chaoran Wang, Allyson Stoll (Master of Data Science Students, University of British Columbia)} \newline
+Collaborated with 4 students to develop a social network analysis dashboard for analyzing social bonds between dairy cows. \\
+2021/7 -- 2021/7 &
+\textbf{Ify Anene, Steffen Pentelow, Selma Durić, Rafael Hellwig, Elanor Boyle-Stanley, Ela Bandari, Sasha Babicki (Master of Data Science Students, University of British Columbia)} \newline
+Collaborated with 7 students in creating an interactive dashboard to visualize cattle behaviors in real-time. \\
+\end{SectionTable}
+
+% --- Section: Professional Development ---
+\begin{SectionTable}{\headingfont Professional Development}
+2024 &
+\textbf{Future of Natural Language Processing (NLP) Workshop in the 38th Neural Information Processing Systems (NeurIPS) conference } \newline
+Gained insights into cutting-edge generative AI models and methods to evaluate their outputs. I was invited to pitch my research insights about AI's representation bias of livestock farming at Google's GenMedia team social event. \\
+2024 &
+\textbf{PyOpenSci Fall Festival} \newline
+Attended a 5-day workshop focusing on creating, testing and documenting Python packages. \\
+2024 &
+\textbf{The 39th Annual Association for the Advancements of Artificial Intelligence (AAAI) Conference } \newline
+Participated in discussions on advancing generative AI research and applications, with a focus on AI ethics and animal welfare implications. \\
+2023 &
+\textbf{Conference on Computer Vision and Pattern Recognition (CVPR)} \newline
+Attended the main CVPR conference, participated in the CV4Animals workshop, and engaged in discussions on the application of computer vision in livestock farming. \\
+2022 &
+\textbf{Product A/B Testing Certificate (Udemy)} \newline
+Completed an online course on A/B testing and multi-armed bandit strategies for technological product development. \\
+2021 &
+\textbf{CIRTL Associate Certificate (Centre for the Integration of Research, Teaching, and Learning)} \newline
+Earned a certificate by attending an instructional skills workshop aimed at enhancing teaching practices. \\
+2021 &
+\textbf{International Farm Animal Welfare Fellow Certificate} \newline
+Recognized as a fellow for participating in the International Farm Animal Welfare Fellowship. \\
+2019 &
+\textbf{Accounting Fundamentals Certificate (Corporate Finance Institute)} \newline
+Obtained a certificate on the basics of accounting, financial principles, and the future market. \\
+2019 &
+\textbf{Agriculture Future of America Technology Institute} \newline
+Learned about precision agriculture and precision livestock farming, networked with industry professionals, and gained insights into the field. \\
+2018 &
+\textbf{Agriculture Future of America Leaders Conference} \newline
+Networked with agriculture industry professionals and students, attended career workshops, and developed leadership and communication skills. \\
+\end{SectionTable}
+
+
+% --- Section: Academic and Professional Service ---
+\begin{SectionTable}{\headingfont Academic and Professional Service}
+2025/3 &
+\textbf{Facilitator, AI for Animals conference} \newline
+Facilitated one meetup and one workshop about Precision Livestock Farming during the 2025 AI for Animals conference. \\
+2024/11 &
+\textbf{Reviewer, Methods in Ecology and Evolution} \newline
+Reviewed one manuscript for this journal, focusing on innovative python script for dominance hierarchy calculation. \\
+2024/1 &
+\textbf{External Reviewer, Dutch Research Council (NWO)} \newline
+Assessed one research funding application for the Dutch Research Council, with a focus on projects related to computer science and neuroscience. \\
+2021/12 -- 2023/5 &
+\textbf{Organizer and Coordinator, UBC Animal Welfare Program 25th Anniversary Webinar Series Celebration} \newline
+Planned a webinar series to celebrate UBC Animal Welfare Program's 25th Anniversary. Invited alumni to give presentations showcasing their impact on the animal welfare field. \\
+2020/9 -- 2021/12 &
+\textbf{Facilitator, Monthly Webinars at UBC Animal Welfare Program} \newline
+Hosted monthly webinar series featuring international speakers, with around 30 participants per session. \\
+\end{SectionTable}
+
+% --- Section: Leadership, Community and Volunteer Activities ---
+\begin{SectionTable}{\headingfont Leadership, Community and Volunteer Activities}
+2025/6 &
+\textbf{Volunteer, ACM Conference on Fairness, Accountability, and Transparency (FAccT)} \newline
+Volunteer to facilitate the 2025 ACM FAccT conference  \\
+2022/8 &
+\textbf{Programming Instructor, Vancouver Independent School for Science and Technology} \newline
+Taught students aged 10-13 how to program video games using PuzzleScript, provided troubleshooting support, and guided independent projects. \\
+2019/6 -- 2019/6 &
+\textbf{Student Leader and Ambassador, Alltech One 19 Conference} \newline
+Represented Agriculture Future of America at Alltech One 19 to negotiate funding, network with industry professionals in precision livestock farming, and explore innovative agricultural technologies. \\
+2017/12 &
+\textbf{Organizer and Speaker Introducer, TED x UW-Madison} \newline
+Organized and hosted TEDx UW-Madison with club members, introduced speakers, and worked as an event photographer. \\
+2013/8 &
+\textbf{Organizer, Chinese and American Charity Ball} \newline
+Organized a charity ball for international students and locals in Yantai, Shandong, China. Donated all proceeds to a primary school in Laiyang, Shandong, and taught English to students during the visit. \\
+2012/12 -- 2013/6 &
+\textbf{Organizer, Second-Hand Book Charity Sales for Stray Dogs} \newline
+Collected second-hand books and hosted charity fairs in Yantai, Shandong, China, donating all proceeds to a local animal shelter. Advocated for stray animal protection through media outreach and partnerships with Animals Asia Foundation. \\
+\end{SectionTable}
+
+% --- Section: Professional society memberships ---
+\begin{SectionTable}{\headingfont Professional Memberships}
+2025/5 -- present &
+\textbf{Graduate Student Member, Association for Computing Machinery (ACM)} \\
+2022/8 -- 2025/12 &
+\textbf{Graduate Student Member, European Federation of Animal Science (EAAP)} \newline
+\textit{Attended annual conferences, presented research on dairy cow behavior and welfare.} \\
+2024/2 -- 2025/2 &
+\textbf{Graduate Student Member, Association for the Advancement of Artificial Intelligence (AAAI)} \newline
+\textit{Explored cutting-edge AI research, participated in conference tutorials, and engaged in discussions about bias in AI, particularly concerning animals and livestock farming.} \\
+2019/1 -- 2023/12 &
+\textbf{Graduate Student Member, American Dairy Science Association} \newline
+\textit{Presented research, attended annual meetings, and participated in student research competitions.} \\
+2019/3 -- 2020/3 &
+\textbf{Student Leader \& Ambassador, Agriculture Future of America} \newline
+\textit{Attended leadership conferences, connected undergraduate students with industry professionals through strategic networking, leadership development, and career-building initiatives.} \\
+\end{SectionTable}
+
+\begin{SectionTable}{\headingfont Technical Skills}
+& \textbf{Programming Languages} \newline
+Advanced: Python (e.g., pandas, numpy, scikit-learn, matplotlib), R (e.g., tidyverse, ggplot2), bash shell, SAS \newline
+Intermediate: HTML, Excel VBA \newline
+Coursework Experience: C++, Java, Julia \\
+& \textbf{Data Science, AI \& Visualization Tools} \newline
+Vibe Programming: Cursor \newline
+Version Control: Git, GitHub \newline
+Cloud \& Containerization: Docker, AWS, Google Colab\newline
+Generative AI models: OpenAI API, Stability AI API\newline
+Visualization: Tableau, R Shiny, Matplotlib, Plotly \\
+& \textbf{Other Software} \newline
+\LaTeX, Notion, 3DSMAX, GNU Make \\
+& \textbf{Languages} \newline
+English (Fluent and Professional), Chinese (Native)
+\end{SectionTable}
+
+
+% --- End of CV! ---
+
+\end{document}
+
+
+
+
+

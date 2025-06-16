@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="site-branding">
+                <h1 class="site-title">
+                    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                </h1>
+                <p class="site-tagline">{{ site.description }}</p>
+            </div>
+            
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research' %}class="current"{% endif %}>Research</a></li>
+                    <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="current"{% endif %}>Projects</a></li>
+                    <li><a href="{{ '/speaking/' | relative_url }}" {% if page.url contains '/speaking' %}class="current"{% endif %}>Speaking</a></li>
+                    <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="current"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with care.</p>
+        </div>
+    </footer>
+</body>
+</html> 

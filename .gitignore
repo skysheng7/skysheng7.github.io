@@ -1,0 +1,31 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler
+vendor/
+Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js (if using)
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
+
+# Environment variables
+.env 
