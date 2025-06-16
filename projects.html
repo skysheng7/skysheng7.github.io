@@ -8,24 +8,11 @@ title: Projects
 <p>I believe in making research reproducible and accessible to all. Here are some of my open-source projects that bridge AI, data science, and animal welfare science.</p>
 
 <div class="project-item">
-    <div class="project-title">moo4feed R Package</div>
-    <div class="project-description">
-        <p>moo4feed is an R package designed to extract novel individual-level traits from raw feeding and drinking data collected through precision livestock farming systems. The package aims to support animal welfare research and data-driven monitoring by enabling reproducible, scalable analysis workflows.</p>
-        <p><strong>Technologies:</strong> R, tidyverse, statistical modeling</p>
-        <p><strong>Impact:</strong> Enables researchers to extract behavioral insights from sensor data</p>
-    </div>
-    <div class="project-links">
-        <a href="https://skysheng7.github.io/moo4feed/">Website</a>
-        <a href="https://github.com/skysheng7/moo4feed">GitHub</a>
-    </div>
-</div>
-
-<div class="project-item">
     <div class="project-title">AI's Representation Bias in Livestock Farming</div>
     <div class="project-description">
-        <p>To evaluate text-to-image generative AI's depiction of how farm animals are raised, I designed 48 prompts and created 4800 dairy and pig farm images using DALL-E 3. This study reveals that DALL-E 3 is systematically biased towards romanticizing livestock farming as dairy cows grazing on pasture and pigs rooting in mud, even when explicitly prompted for realistic depictions.</p>
+        <p>Due to biases embedded in the prompt revision process, text-to-image generative AI systematically romanticized livestock farming as dairy cows grazing on pasture and pigs rooting in mud, even when asked for realistic depictions. Inhibiting prompt revision resulted in images that more closely reflected modern farming practices: cows housed indoors accessing feed through metal headlocks, and pigs behind metal railings on concrete floors. These findings reveal how prompt revision systematically promotes certain ideologies while erasing the reality.</p>
         <p><strong>Technologies:</strong> Python, OpenAI API, Docker, GNU Make, statistical analysis</p>
-        <p><strong>Impact:</strong> First comprehensive study of AI bias in agricultural representation</p>
+        <p><strong>Impact:</strong> First comprehensive study of the bias of text-to-image generative AI in depicting farm animals</p>
     </div>
     <div class="project-links">
         <a href="https://github.com/skysheng7/AI_bias_in_farming">GitHub</a>
@@ -34,10 +21,46 @@ title: Projects
 </div>
 
 <div class="project-item">
+    <div class="project-title">AI Agent System Prompts & Rules</div>
+    <div class="project-description">
+        <p>moo4feed is an R package designed to extract novel individual-level animal traits from raw feeding and drinking data collected from sensors. The package aims to support animal welfare science research and data-driven monitoring by enabling reproducible, scalable analysis workflows.</p>
+        <p><strong>Technologies:</strong> R, Cursor, Shell, Markdown</p>
+        <p><strong>Impact:</strong> Enables researchers to easily visualize, analyze, and understand the story of every single animal from sensor data</p>
+    </div>
+    <div class="project-links">
+        <a href="https://skysheng7.github.io/moo4feed/">Website</a>
+        <a href="https://github.com/skysheng7/moo4feed">GitHub</a>
+    </div>
+</div>
+
+
+<div class="project">
+    <h3><a href="https://github.com/skysheng7/ai-agent-prompts" target="_blank">AI Agent System Prompts & Rules</a></h3>
+    <p class="project-meta">2024 - Present | Python, Shell, Markdown</p>
+    <p>A curated collection of battle-tested system prompts and rules for guiding AI agents across different domains and tasks. This repository contains real-world tested prompts that have been proven effective in production environments for various AI applications including software development, data science, and research tasks.</p>
+    <p><strong>Key Features:</strong> Battle-tested prompts, organized by domain, templates with placeholders, comprehensive documentation</p>
+  </div>
+
+
+<div class="project-item">
+    <div class="project-title">moo4feed R Package</div>
+    <div class="project-description">
+        <p>moo4feed is an R package designed to extract novel individual-level animal traits from raw feeding and drinking data collected from sensors. The package aims to support animal welfare science research and data-driven monitoring by enabling reproducible, scalable analysis workflows.</p>
+        <p><strong>Technologies:</strong> R, tidyverse, time-series analysis, statistical modeling, data visualization</p>
+        <p><strong>Impact:</strong> Enables researchers to easily visualize, analyze, and understand the story of every single animal from sensor data</p>
+    </div>
+    <div class="project-links">
+        <a href="https://skysheng7.github.io/moo4feed/">Website</a>
+        <a href="https://github.com/skysheng7/moo4feed">GitHub</a>
+    </div>
+</div>
+
+
+<div class="project-item">
     <div class="project-title">Competition Dominance Analysis</div>
     <div class="project-description">
         <p>This thoroughly documented and well-organized R project uses a Bayesian statistical framework to examine how feed competition influences the structure of dominance hierarchies in dairy cattle. I used an algorithm to automatically detect displacement behaviors at the feeder, analyzing data from 159 cows over a 10-month period.</p>
-        <p><strong>Technologies:</strong> R, Bayesian modeling, automated behavior detection</p>
+        <p><strong>Technologies:</strong> R, Bayesian modeling, Elo-rating,automated behavior detection</p>
         <p><strong>Impact:</strong> First study to demonstrate that competition flattens dominance hierarchies</p>
     </div>
     <div class="project-links">
@@ -50,8 +73,8 @@ title: Projects
     <div class="project-title">Lameness Hierarchy</div>
     <div class="project-description">
         <p>This project integrates Python, R, and HTML/CSS/JavaScript to develop an innovative lameness assessment tool for dairy cows using Amazon MTurk. Similar in concept to the chatbot arena for ranking generative AI models, our system ranks cows based on the severity of lameness. Crowd workers perform pairwise comparisons judging which cow is more lame when watching two cows walking side by side.</p>
-        <p><strong>Technologies:</strong> Python, R, JavaScript, Amazon MTurk, Bayesian Elo-rating</p>
-        <p><strong>Impact:</strong> Enables scalable, cost-effective lameness assessment</p>
+        <p><strong>Technologies:</strong> Python, R, HTML/CSS/JavaScript, Amazon MTurk, AWS, Bayesian Elo-rating</p>
+        <p><strong>Impact:</strong> Revolutionized lameness assessment by enabling reliable, scalable, and cost-effective assessment</p>
     </div>
     <div class="project-links">
         <a href="https://github.com/skysheng7/lameness_hierarchy">GitHub</a>
@@ -62,9 +85,9 @@ title: Projects
 <div class="project-item">
     <div class="project-title">Welfare Assessment using GPT-4o</div>
     <div class="project-description">
-        <p>This project, developed in Python and R, evaluates cow welfare through automated image analysis using GPT-4o and the Segment Anything Model (SAM). This study investigated whether GPT-4o can achieve expert-level accuracy in assessing cow cleanliness after being provided with the Welfare Quality Protocol manual and two example images per category.</p>
-        <p><strong>Technologies:</strong> Python, OpenAI GPT-4o, Segment Anything Model, computer vision</p>
-        <p><strong>Impact:</strong> Demonstrates potential of LLMs for automated welfare assessment</p>
+        <p>This project evaluates cow welfare through automated image analysis using GPT-4o and the Segment Anything Model (SAM). This study investigated whether GPT-4o can achieve expert-level accuracy in assessing cow cleanliness after being provided with the Welfare Quality Protocol manual and example images.</p>
+        <p><strong>Technologies:</strong> Python, R, OpenAI GPT-4o, Segment Anything Model, computer vision</p>
+        <p><strong>Impact:</strong> Demonstrates potential of Large Multimodal Models for automated welfare assessment</p>
     </div>
     <div class="project-links">
         <a href="https://github.com/skysheng7/welfare_assess_GPT4o">GitHub</a>
@@ -86,11 +109,11 @@ title: Projects
 
 <h2>Open Source Philosophy</h2>
 
-<p>I believe in the power of open science and reproducible research. All my projects include:</p>
+<p>I believe in the power of open science and reproducible research. My projects include:</p>
 
 <ul style="list-style-type: disc; margin-left: 2rem; color: #555; line-height: 1.7;">
-    <li><strong>Comprehensive documentation</strong> - Clear README files and code comments</li>
-    <li><strong>Reproducible workflows</strong> - Docker containers, environment files, and step-by-step instructions</li>
+    <li><strong>Comprehensive documentation</strong> - Clear README files, vignettes, and code comments</li>
+    <li><strong>Reproducible workflows</strong> - Docker containers, conda locks, environment files, and step-by-step instructions</li>
     <li><strong>Clean, well-organized code</strong> - Following best practices for maintainability</li>
     <li><strong>Data and model transparency</strong> - Where possible, sharing datasets and model weights</li>
     <li><strong>Educational value</strong> - Code that others can learn from and build upon</li>

@@ -1,6 +1,6 @@
 # Sky Sheng - Personal Website
 
-A clean, professional personal website showcasing my work in AI ethics, animal welfare science, and data science. Built with Jekyll and inspired by modern academic website design.
+A clean, professional personal website showcasing my work in data science, AI application, AI ethics, and animal welfare science. Built with Jekyll and inspired by modern academic website design.
 
 ## 🌟 Features
 
