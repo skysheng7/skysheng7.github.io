@@ -1,17 +1,45 @@
 ---
 layout: default
 title: Curriculum Vitae
+description: "Sky Sheng's academic CV - PhD candidate at UBC specializing in AI bias, data science, and animal welfare. View publications, awards, and research experience."
 ---
 
 <h1>Curriculum Vitae</h1>
 
 <p>This curriculum vitae is maintained using LaTeX and is regularly updated to reflect my latest research, publications, and achievements. The document showcases my work at the intersection of AI bias, data science, and animal welfare science.</p>
 
-<div class="cv-actions">
-  <a href="Sky_CV.pdf" class="cv-download-btn" download>
+<div class="cv-actions" style="margin-bottom: 2rem;">
+  <a href="Sky_CV.pdf" class="cv-download-btn" download style="display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">
     📄 Download CV (PDF)
   </a>
+  <button onclick="toggleFullscreen()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    🔍 View Fullscreen
+  </button>
 </div>
+
+<!-- PDF Viewer -->
+<div class="pdf-container" style="width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+  <iframe 
+    id="pdf-viewer"
+    src="Sky_CV.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+    style="width: 100%; height: 100%; border: none;"
+    title="Sky Sheng CV">
+    <p>Your browser does not support PDFs. <a href="Sky_CV.pdf">Download the PDF</a> to view it.</p>
+  </iframe>
+</div>
+
+<script>
+function toggleFullscreen() {
+  const iframe = document.getElementById('pdf-viewer');
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.webkitRequestFullscreen) {
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) {
+    iframe.msRequestFullscreen();
+  }
+}
+</script>
 
 <h2>Key Sections</h2>
 
