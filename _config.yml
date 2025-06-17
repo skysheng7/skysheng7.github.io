@@ -1,13 +1,13 @@
 # Site Settings
 title: "Sky Sheng"
-description: "AI Application Engineer & Data Scientist | PhD Candidate, UBC"
+description: "AI Bias Researcher | Data Scientist | AI Applications for Animal Welfare | PhD Candidate, UBC" 
 url: "https://skysheng7.github.io"
 repository: "skysheng7/skysheng7.github.io"
 
 # Site Author
 author:
   name: "Sky (Kehan) Sheng"
-  bio: "AI Application Engineer passionate about using AI to empower marginalized communities and address real-world challenges"
+  bio: "Data Scientist & AI Bias Researcher passionate about using AI to empower marginalized communities and address real-world challenges"
   location: "Vancouver, BC, Canada"
   email: "skysheng7@gmail.com"
   links:
