@@ -218,6 +218,114 @@ a:hover {
     border-bottom-color: #333;
 }
 
+/* Awards section */
+.funding-summary {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.funding-total {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.award-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+.award-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.award-amount {
+    color: #2d5a27;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.award-description {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.award-venue {
+    color: #666;
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+/* Teaching section */
+.teaching-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+.teaching-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.teaching-venue {
+    color: #666;
+    font-style: italic;
+}
+
+.teaching-description {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* CV section */
+.cv-actions {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.cv-download-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.cv-download-btn:hover {
+    background-color: #555;
+    border-bottom: none;
+}
+
+/* Enhanced link styling for consistency */
+.talk-title a,
+.teaching-title a,
+.award-description a {
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.talk-title a:hover,
+.teaching-title a:hover,
+.award-description a:hover {
+    border-bottom-color: #333;
+}
+
 /* Speaking/Talks section */
 .year-section {
     margin-bottom: 3rem;
