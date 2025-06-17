@@ -1,7 +1,6 @@
 # Site Settings
-title: Sky (Kehan) Sheng
-description: AI Application Engineer & Data Scientist | PhD Candidate, UBC
-baseurl: ""
+title: "Sky Sheng"
+description: "AI Application Engineer & Data Scientist | PhD Candidate, UBC"
 url: "https://skysheng7.github.io"
 repository: "skysheng7/skysheng7.github.io"
 
@@ -97,31 +96,4 @@ plugins:
 compress_html:
   clippings: all
   ignore:
-    envs: development
-
-# Navigation
-navigation:
-  - name: Home
-    url: /
-  - name: Research
-    url: /research.html
-  - name: Projects
-    url: /projects.html
-  - name: Speaking
-    url: /speaking.html
-  - name: Teaching
-    url: /teaching.html
-  - name: Awards
-    url: /awards.html
-  - name: CV
-    url: /cv.html
-  - name: Contact
-    url: /contact.html
-
-# Social links
-social:
-  linkedin: "https://www.linkedin.com/in/sky-sheng"
-  github: "https://github.com/skysheng7"
-  scholar: "https://scholar.google.com/citations?user=yz-cWVgAAAAJ"
-  orcid: "https://orcid.org/0000-0001-6442-5284"
-  email: "skysheng7@gmail.com" 
+    envs: development 
