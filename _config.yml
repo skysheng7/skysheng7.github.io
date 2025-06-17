@@ -97,6 +97,16 @@ plugins:
 google_site_verification: googlee57ba1f04e0cb377.html
 lang: en_US
 
+# Include files
+include:
+  - "*.pdf"
+  - "Sky_CV.pdf"
+
+# Keep files
+keep_files:
+  - "*.pdf"
+  - "Sky_CV.pdf"
+
 # HTML Compression
 compress_html:
   clippings: all
