@@ -91,6 +91,11 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-seo-tag
+
+# SEO
+google_site_verification: googlee57ba1f04e0cb377.html
+lang: en_US
 
 # HTML Compression
 compress_html:
