@@ -3,7 +3,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://skysheng7.github.io/sitemap.xml
-
-# Block access to specific file types that shouldn't be indexed
-Disallow: *.tex$
-Disallow: *.pdf$ 
