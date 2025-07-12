@@ -9,7 +9,7 @@ description: "Sky Sheng's academic CV - PhD candidate at UBC specializing in AI 
 <p>This curriculum vitae is maintained using LaTeX and is regularly updated to reflect my latest research, publications, and achievements. The document showcases my work at the intersection of AI bias, data science, and animal welfare science.</p>
 
 <div class="cv-actions" style="margin-bottom: 2rem;">
-  <a href="{{ '/Sky_CV.pdf' | relative_url }}" class="cv-download-btn" download style="display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">
+  <a href="{{ '/cv/Sky_CV.pdf' | relative_url }}" class="cv-download-btn" download style="display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">
     📄 Download CV (PDF)
   </a>
   <button onclick="toggleFullscreen()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">
@@ -21,12 +21,12 @@ description: "Sky Sheng's academic CV - PhD candidate at UBC specializing in AI 
 <div class="pdf-container" style="width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
   <iframe 
     id="pdf-viewer"
-    src="{{ '/Sky_CV.pdf' | relative_url }}#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
+    src="{{ '/cv/Sky_CV.pdf' | relative_url }}#view=FitH&toolbar=1&navpanes=0&scrollbar=1" 
     style="width: 100%; height: 100%; border: none;"
     title="Sky Sheng CV"
     onload="checkPdfLoad()"
     onerror="showPdfError()">
-    <p>Your browser does not support PDFs. <a href="{{ '/Sky_CV.pdf' | relative_url }}">Download the PDF</a> to view it.</p>
+    <p>Your browser does not support PDFs. <a href="{{ '/cv/Sky_CV.pdf' | relative_url }}">Download the PDF</a> to view it.</p>
   </iframe>
 </div>
 
@@ -35,10 +35,10 @@ description: "Sky Sheng's academic CV - PhD candidate at UBC specializing in AI 
   <h3>📄 View CV</h3>
   <p>Your browser doesn't support inline PDF viewing. Please use one of these options:</p>
   <div style="margin-top: 1rem;">
-    <a href="{{ '/Sky_CV.pdf' | relative_url }}" target="_blank" style="display: inline-block; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
+    <a href="{{ '/cv/Sky_CV.pdf' | relative_url }}" target="_blank" style="display: inline-block; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
       🔗 Open PDF in New Tab
     </a>
-    <a href="{{ '/Sky_CV.pdf' | relative_url }}" download style="display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
+    <a href="{{ '/cv/Sky_CV.pdf' | relative_url }}" download style="display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
       📥 Download PDF
     </a>
   </div>
