@@ -227,10 +227,20 @@ a:hover {
     text-align: center;
 }
 
+.funding-summary h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0 0.25rem 0;
+}
+
+.funding-summary h2:first-of-type {
+    margin-top: 0;
+}
+
 .funding-total {
     font-size: 2rem;
     font-weight: 600;
-    color: #333;
+    color: #2d5a27;
     margin: 0;
 }
 
