@@ -221,7 +221,7 @@ a:hover {
 /* Awards section */
 .funding-summary {
     background-color: #f8f9fa;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 3rem;
     text-align: center;
@@ -238,8 +238,8 @@ a:hover {
 }
 
 .funding-total {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: #2d5a27;
     margin: 0;
 }
