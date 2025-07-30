@@ -111,28 +111,6 @@ Honors: Dean's List (2017-2020), Distinctive Scholastic Achievement \newline
 Relevant Coursework: Matrix Methods in Machine Learning, Programming in Java, Human Computer Interactions, Discrete Mathematics, Introduction to Computer Engineering, Statistics and Computation in R \\
 \end{SectionTable}
 
-% --- Section: Projects ---
-\begin{SectionTable}{\headingfont Open-source Projects}
-2025/2 -- 2025/6 &
-\textbf{\href{https://skysheng7.github.io/moo4feed/}{R package: moo4feed}} \socialicon{\faGithub}  \newline
-moo4feed is an R package designed to extract novel individual-level traits from raw feeding and drinking data collected through precision livestock farming systems. The package aims to support animal welfare research and data-driven monitoring by enabling reproducible, scalable analysis workflows. \\
-2024/10 -- 2025/2 &
-\textbf{\href{https://github.com/skysheng7/AI_bias_in_farming.git}{AI's representation bias about livestock farming}} \socialicon{\faGithub}  \newline
-To evaluate text-to-image generative AI's depiction of how farm animals are raised, I designed 48 prompts and created 4800 dairy and pig farm images using DALL-E 3. This study reveals that DALL-E 3 is systematically biased towards romanticizing livestock farming as dairy cows grazing on pasture and pigs rooting in mud, even when explicitly prompted for realistic depictions. When automatic prompt revision was disabled, the generated images better reflected modern intensive farming practices. While prompt revision was implemented to mitigate bias, it paradoxically erased intensive farming reality and misled the public to believe that farmed animals live extensively. The analysis is fully reproducible via a customized Docker image and GNU Make workflow. \\
-2023/1 -- 2024/3 &
-\textbf{\href{https://github.com/skysheng7/competition_dominance_analysis}{Competition Dominance Analysis}} \socialicon{\faGithub}  \newline
-This thoroughly documented and well-organized R project uses a Bayesian statistical framework to examine how feed competition influences the structure of dominance hierarchies in dairy cattle. I used an algorithm to automatically detect displacement behaviors at the feeder, analyzing data from 159 cows over a 10-month period. This study is the first to demonstrate that high competition periods are linked to a flattening of the dominance hierarchy, driven by subordinate cows becoming more successful at displacing herd mates when access to resources is limited. Our findings suggest that dominance hierarchies based on agonistic behaviors during high-competition periods better reflect cows’ motivation for fresh feed rather than their inherent dominance traits. \\
-2023/7 -- 2025/2 &
-\textbf{\href{https://github.com/skysheng7/lameness_hierarchy}{Lameness Hierarchy}} \socialicon{\faGithub} \newline
-This project integrates Python, R, and HTML/CSS/JavaScript to develop an innovative lameness assessment tool for dairy cows using Amazon MTurk. Lameness in dairy cows is a painful condition that affects their ability to walk normally. Similar in concept to the \text{\href{https://lmarena.ai/}{chatbot arena}} for ranking generative AI models, our system ranks cows based on the severity of lameness. Crowd workers perform pairwise comparisons judging which cow is more lame when watching two cows walking side by side, and the results are analyzed using the Elo-rating method within a Bayesian framework to rank cows from the most healthy to the most lame. This approach enables early detection of mobility issues, supports timely treatment, and reduces prolonged pain. The results demonstrated that untrained crowd workers can achieve accuracy comparable to trained experts. Additionally, a subsampling algorithm reduces the number of required comparisons while maintaining ranking accuracy, providing a scalable, cost-effective solution for generating high-quality training datasets to improve automated lameness detection models.\\
-2024/2 -- 2024/7 &
-\textbf{\href{https://github.com/skysheng7/welfare_assess_GPT4o}{Welfare Assessment using GPT-4o}} \socialicon{\faGithub} \newline
-This project, developed in Python and R, evaluates cow welfare through automated image analysis using GPT-4o and the Segment Anything Model (SAM). This study investigated whether GPT-4o can achieve expert-level accuracy in assessing cow cleanliness (hind leg, hindquarter, udder) after being provided with the Welfare Quality Protocol manual and two example images per category. To enhance accuracy, I explored different prompting strategies and image processing techniques, such as applying bounding boxes to highlight areas of interest and using segmentation to isolate specific body parts. Data analysis showed that segmentation and bounding boxes improved model performance by reducing bias towards labeling cows as dirty. This approach highlights the potential of AI-driven visual assessments for more efficient and real-time animal welfare evaluations. \\
-2022/9 -- 2022/12 &
-\textbf{\href{https://github.com/skysheng7/Lameness-prediction-ML.git}{Lameness Prediction through Machine Learning}} \socialicon{\faGithub} \newline
-This project applies various machine learning methods, including Support Vector Machines, Random Forest, K-Nearest Neighbors, and Logistic Regression, to predict lameness in dairy cows based on behavioral data. Using data from 34 lame and 100 healthy cows over 10 months, we analyzed the impact of data preprocessing techniques such as undersampling, feature selection, and dimensionality reduction on model performance. The study demonstrated that weekly aggregated data and balanced sampling significantly improve predictive accuracy. This work highlights the potential of machine learning for early, automated lameness detection in precision livestock farming. \newline
-\textit{Note: This GitHub repository is private as the associated paper has not been published yet. Please email me to request private access.} \\
-\end{SectionTable}
 
 % --- Section: Publications ---
 
@@ -207,6 +185,29 @@ Krahn, J., Foris, B., \textbf{Sheng, K.}, Weary, D.M., von Keyserlingk, M.A.G. \
 \textbf{Sheng, K.}, Reuscher, K., Chung, H., Choi, C., Kim, Y., Brounts, S., Van Os, J. \newline
 \textit{The American Dairy Science Association (ADSA) Annual Meeting}, Cincinnati, OH, USA.
 \end{SectionTable}
+
+% --- Section: Projects ---
+\begin{SectionTable}{\headingfont Open-source Projects}
+	2025/2 -- 2025/6 &
+	\textbf{\href{https://skysheng7.github.io/moo4feed/}{R package: moo4feed}} \socialicon{\faGithub}  \newline
+	An R package to extract individual-level traits from feeding and drinking data collected by precision livestock farming systems, supporting reproducible and scalable animal welfare research. \\
+	2024/10 -- 2025/2 &
+	\textbf{\href{https://github.com/skysheng7/AI_bias_in_farming.git}{AI's representation bias about livestock farming}} \socialicon{\faGithub}  \newline
+	Investigated representation bias in text-to-image generative AI, revealing the automated prompt revision process could erase the reality of controversial topics, and reinforces common misconceptions. The analysis is fully reproducible via a customized Docker image and GNU Make workflow. \\
+	2023/1 -- 2024/3 &
+	\textbf{\href{https://github.com/skysheng7/competition_dominance_analysis}{Competition Dominance Analysis}} \socialicon{\faGithub}  \newline
+	Used a Bayesian statistical framework to show that high feed competition flattens dominance hierarchies in dairy cattle. Developed an algorithm to automatically detect displacement behaviors, and monitor dominance hierarchy over time. \\
+	2023/7 -- 2025/2 &
+	\textbf{\href{https://github.com/skysheng7/lameness_hierarchy}{Lameness Hierarchy}} \socialicon{\faGithub} \newline
+	Developed a novel lameness assessment tool using crowd-sourcing (Amazon MTurk) and a Bayesian Elo-rating system, similar to the LLM chatbot arena. Untrained workers achieved expert-level accuracy in pairwise comparisons of cow videos, providing a scalable and cost-effective method for early lameness detection. \\
+	2024/2 -- 2024/7 &
+	\textbf{\href{https://github.com/skysheng7/welfare_assess_GPT4o}{Welfare Assessment using GPT-4o}} \socialicon{\faGithub} \newline
+	Evaluated cattle cleanliness through automated image analysis using GPT-4o and the Segment Anything Model (SAM). Explored various prompting and image processing techniques, finding that image segmentation improved model performance the most. \\
+	2022/9 -- 2022/12 &
+	\textbf{\href{https://github.com/skysheng7/Lameness-prediction-ML.git}{Lameness Prediction through Machine Learning}} \socialicon{\faGithub} \newline
+	Applied various machine learning models to predict lameness in dairy cows from behavioral data. The study demonstrated that data preprocessing techniques, such as balanced sampling, significantly improved predictive accuracy for early detection. \newline
+	\textit{Note: This GitHub repository is private as the associated paper has not been published yet. Please email me to request private access.} \\
+	\end{SectionTable}
 
 % --- Section: Research Funding ---
 \begin{SectionTableSingleSpace}{\headingfont Research Funding}
@@ -550,34 +551,34 @@ Networked with agriculture industry professionals and students, attended career 
 2025 -- present &
 \textbf{Research Collaborator, \href{https://trustml.ubc.ca/profiles/sky-sheng}{UBC TrustML Research Cluster}} \newline
 Collaborate on research projects focusing on building reliable, secure, explainable, and ethical AI systems. \\
-2025/3 &
-\textbf{Facilitator, AI for Animals conference} \newline
-Facilitated one meetup and one workshop about Precision Livestock Farming during the 2025 AI for Animals conference. \\
 2024/11 -- 2025/5 &
 \textbf{Reviewer, Methods in Ecology and Evolution} \newline
 Reviewed one manuscript for this journal, focusing on innovative python script for dominance hierarchy calculation. \\
 2024/1 &
 \textbf{External Reviewer, Dutch Research Council (NWO)} \newline
 Assessed one research funding application for the Dutch Research Council, with a focus on projects related to computer science and neuroscience. \\
-2021/12 -- 2023/5 &
-\textbf{Organizer and Coordinator, UBC Animal Welfare Program 25th Anniversary Webinar Series Celebration} \newline
-Planned a webinar series to celebrate UBC Animal Welfare Program's 25th Anniversary. Invited alumni to give presentations showcasing their impact on the animal welfare field. \\
-2020/9 -- 2021/12 &
-\textbf{Facilitator, Monthly Webinars at UBC Animal Welfare Program} \newline
-Hosted monthly webinar series featuring international speakers, with around 30 participants per session. \\
 \end{SectionTable}
 
 % --- Section: Leadership, Community and Volunteer Activities ---
 \begin{SectionTable}{\headingfont Leadership, Community and Volunteer Activities}
 2025/6 &
 \textbf{Volunteer, ACM Conference on Fairness, Accountability, and Transparency (FAccT)} \newline
-Volunteer to facilitate the 2025 ACM FAccT conference  \\
+Volunteer to facilitate oral presentations at the 2025 ACM FAccT conference  \\
+2025/3 &
+\textbf{Facilitator, AI for Animals conference} \newline
+Facilitated one meetup and one workshop about Precision Livestock Farming during the 2025 AI for Animals conference. \\
 2022/8 &
 \textbf{Programming Instructor, Vancouver Independent School for Science and Technology} \newline
 Taught students aged 10-13 how to program video games using PuzzleScript, provided troubleshooting support, and guided independent projects. \\
-2019/6 -- 2019/6 &
-\textbf{Student Leader and Ambassador, Alltech One 19 Conference} \newline
-Represented Agriculture Future of America at Alltech One 19 to negotiate funding, network with industry professionals in precision livestock farming, and explore innovative agricultural technologies. \\
+2021/12 -- 2023/5 &
+\textbf{Organizer and Coordinator, UBC Animal Welfare Program 25th Anniversary Webinar Series Celebration} \newline
+Planned a webinar series to celebrate UBC Animal Welfare Program's 25th Anniversary. Invited alumni to give presentations showcasing their impact on the animal welfare field. \\
+2020/9 -- 2021/12 &
+\textbf{Facilitator, Monthly Webinars at UBC Animal Welfare Program} \newline
+Hosted monthly webinar series featuring international speakers, with around 30 participants per session. \\
+2019/3 -- 2020/3 &
+\textbf{Student Leader and Ambassador, Agriculture Future of America} \newline
+Built a bridge for undergraduate students to connect with industry professionals through strategic networking, leadership development, and career-building initiatives. Represented Agriculture Future of America at various conferences (e.g., Alltech One 19) to negotiate funding and network with industry professionals. \\
 2017/12 &
 \textbf{Organizer and Speaker Introducer, TED x UW-Madison} \newline
 Organized and hosted TEDx UW-Madison with club members, introduced speakers, and worked as an event photographer. \\
@@ -600,11 +601,8 @@ Collected second-hand books and hosted charity fairs in Yantai, Shandong, China,
 \textbf{Graduate Student Member, Association for the Advancement of Artificial Intelligence (AAAI)} \newline
 \textit{Explored cutting-edge AI research, participated in conference tutorials, and engaged in discussions about bias in AI, particularly concerning animals and livestock farming.} \\
 2019/1 -- 2023/12 &
-\textbf{Graduate Student Member, American Dairy Science Association} \newline
+\textbf{Graduate Student Member, American Dairy Science Association (ADSA)} \newline
 \textit{Presented research, attended annual meetings, and participated in student research competitions.} \\
-2019/3 -- 2020/3 &
-\textbf{Student Leader \& Ambassador, Agriculture Future of America} \newline
-\textit{Attended leadership conferences, connected undergraduate students with industry professionals through strategic networking, leadership development, and career-building initiatives.} \\
 \end{SectionTable}
 
 \begin{SectionTable}{\headingfont Technical Skills}
