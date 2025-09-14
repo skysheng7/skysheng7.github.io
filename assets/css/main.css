@@ -139,7 +139,7 @@ a:hover {
     grid-template-columns: 1fr 2fr;
     gap: 4rem;
     margin-bottom: 4rem;
-    align-items: end;
+    align-items: start;
 }
 
 .hero-image {
@@ -162,10 +162,27 @@ a:hover {
     font-weight: 300;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .hero-description {
     font-size: 1rem;
     line-height: 1.7;
     color: #555;
+    flex-grow: 1;
+}
+
+.hero-description p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    margin-top: auto;
 }
 
 /* Publications and Projects */
@@ -437,9 +454,6 @@ a:hover {
 }
 
 /* Social Links */
-.social-links {
-    margin-top: 2rem;
-}
 
 .social-links a {
     color: #666;
@@ -482,6 +496,14 @@ a:hover {
         text-align: center;
     }
     
+    .hero-content {
+        display: block;
+    }
+    
+    .social-links {
+        margin-top: 2rem;
+    }
+    
     h1 {
         font-size: 2rem;
     }
@@ -503,6 +525,10 @@ a:hover {
     
     .hero-content h1 {
         margin-bottom: 2rem;
+    }
+    
+    .hero-description p {
+        font-size: 1.2rem;
     }
     
     .container {
