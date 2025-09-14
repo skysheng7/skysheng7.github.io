@@ -11,8 +11,25 @@ description: "Sky Sheng - PhD Candidate at UBC specializing in AI bias and Appli
     
     <div class="hero-content">
         <h1>Sky (Kehan) Sheng</h1>
-        <p class="hero-subtitle">AI Bias Researcher | Data Scientist | AI Applications for Animal Welfare <br>
-            PhD Candidate, the University of British Columbia </p>
+        
+        <!-- Terminal-style typewriter animation -->
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-control close"></span>
+                    <span class="terminal-control minimize"></span>
+                    <span class="terminal-control maximize"></span>
+                </div>
+                <div class="terminal-title">sky@ubc:~</div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">sky@ubc:~$</span>
+                    <span class="terminal-command" id="typewriter"></span>
+                    <span class="terminal-cursor" id="cursor">|</span>
+                </div>
+            </div>
+        </div>
 
         <div class="hero-description">
             <p>I'm passionate about using AI to empower minorities and marginalized communities in gaining technical skills, and developing AI solutions to address real-world challenges. As a PhD candidate at the University of British Columbia, I conduct interdisciplinary research bridging AI Bias and Applications, Data Science, and Animal Welfare Science. While I don't have all the right answers to biases in AI, I wish to foster more diverse representation and perspectives in AI development. I believe it's crucial that we don't lose the voices of those not in power and making them invisible behind numeric machines through coded gaze. I recognize that ethical AI application includes knowing not using AI is also an option.</p>
@@ -59,4 +76,67 @@ description: "Sky Sheng - PhD Candidate at UBC specializing in AI bias and Appli
         </div>
     </div>
     
-</section> 
+</section>
+
+<script>
+// Typewriter animation script
+const typewriter = document.getElementById('typewriter');
+const cursor = document.getElementById('cursor');
+
+const titles = [
+    'Who Am I?',
+    'AI Fairness Researcher',
+    'Data Scientist for Animal Welfare',
+    'PhD Candidate @ UBC',
+    'Lecturer @ UBC MDS'
+];
+
+let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let isPaused = false;
+
+function typeWriter() {
+    const currentTitle = titles[titleIndex];
+    
+    if (isPaused) {
+        setTimeout(typeWriter, 2000); // Pause for 2 seconds
+        isPaused = false;
+        return;
+    }
+    
+    if (isDeleting) {
+        typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+        charIndex--;
+        
+        if (charIndex === 0) {
+            isDeleting = false;
+            titleIndex = (titleIndex + 1) % titles.length;
+            setTimeout(typeWriter, 500); // Pause before typing next
+            return;
+        }
+    } else {
+        typewriter.textContent = currentTitle.substring(0, charIndex + 1);
+        charIndex++;
+        
+        if (charIndex === currentTitle.length) {
+            isPaused = true;
+            isDeleting = true;
+        }
+    }
+    
+    const speed = isDeleting ? 100 : 150;
+    setTimeout(typeWriter, speed);
+}
+
+// Blinking cursor animation
+function blinkCursor() {
+    cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+}
+
+// Start animations
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(typeWriter, 1000); // Start after 1 second
+    setInterval(blinkCursor, 530); // Cursor blinks every 530ms
+});
+</script>
