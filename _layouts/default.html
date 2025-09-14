@@ -70,7 +70,10 @@
                 <h1 class="site-title">
                     <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
                 </h1>
-                <p class="site-tagline">{{ site.description }}</p>
+                <div class="site-tagline">
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="typewriter-cursor" id="cursor">|</span>
+                </div>
             </div>
             
             <nav class="site-nav">
@@ -98,5 +101,70 @@
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with care.</p>
         </div>
     </footer>
+
+    <script>
+    // Typewriter animation script
+    const typewriter = document.getElementById('typewriter');
+    const cursor = document.getElementById('cursor');
+
+    const titles = [
+        'Who Am I?',
+        'AI Fairness Researcher',
+        'Data Scientist for Animal Welfare',
+        'PhD Candidate @ UBC',
+        'Lecturer @ UBC MDS'
+    ];
+
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
+
+    function typeWriter() {
+        const currentTitle = titles[titleIndex];
+        
+        if (isPaused) {
+            setTimeout(typeWriter, 2000); // Pause for 2 seconds
+            isPaused = false;
+            return;
+        }
+        
+        if (isDeleting) {
+            typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+            charIndex--;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length;
+                setTimeout(typeWriter, 500); // Pause before typing next
+                return;
+            }
+        } else {
+            typewriter.textContent = currentTitle.substring(0, charIndex + 1);
+            charIndex++;
+            
+            if (charIndex === currentTitle.length) {
+                isPaused = true;
+                isDeleting = true;
+            }
+        }
+        
+        const speed = isDeleting ? 100 : 150;
+        setTimeout(typeWriter, speed);
+    }
+
+    // Blinking cursor animation
+    function blinkCursor() {
+        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }
+
+    // Start animations
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typewriter && cursor) {
+            setTimeout(typeWriter, 1000); // Start after 1 second
+            setInterval(blinkCursor, 530); // Cursor blinks every 530ms
+        }
+    });
+    </script>
 </body>
 </html> 
