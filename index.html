@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greet Sky's Otter Friends!</title>
+    <title>Hi Sky!</title>
     <style>
         * {
             margin: 0;
@@ -29,19 +29,24 @@
             position: relative;
         }
         
-        .title {
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-weight: 400;
+        .main-title {
+            font-size: 3rem !important;
+            padding: 1.5rem 3rem !important;
+            margin-bottom: 3rem;
+        }
+        
+        .otter-prompt {
+            font-size: 1.2rem;
+            color: #666;
+            font-family: 'Crimson Text', serif;
+            margin-bottom: 1.5rem;
+            font-style: italic;
         }
         
         .counter-section {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
         }
         
         .counter-btn {
@@ -70,16 +75,13 @@
             cursor: not-allowed;
         }
         
-        .counter-display {
-            font-size: 2rem;
+        .counter-text {
+            font-size: 1.5rem;
             color: #333;
-            font-weight: 600;
-            min-width: 200px;
+            font-weight: 400;
+            min-width: 120px;
             text-align: center;
-            background: #fff;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Crimson Text', serif;
         }
         
         .hi-sky-btn {
@@ -182,8 +184,8 @@
         .otter-11 {
             width: 200px;
             height: auto;
-            bottom: 300px;
-            left: 350px;
+            bottom: 250px;
+            left: 270px;
         }
         
         .message {
@@ -241,15 +243,20 @@
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .title {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
+            .main-title {
+                font-size: 2.5rem !important;
+                padding: 1.25rem 2.5rem !important;
+                margin-bottom: 2rem;
             }
             
-            .counter-display {
-                font-size: 1.5rem;
-                min-width: 150px;
-                padding: 0.75rem 1.5rem;
+            .otter-prompt {
+                font-size: 1rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .counter-text {
+                font-size: 1.25rem;
+                min-width: 100px;
             }
             
             .counter-btn {
@@ -258,58 +265,65 @@
                 font-size: 1.25rem;
             }
             
-            .hi-sky-btn {
-                font-size: 1rem;
-                padding: 0.75rem 1.5rem;
-            }
             
             /* Mobile otter sizing and positioning - keep varied but ensure visibility */
-            .otter-1 { width: 120px; left: 10px; } /* moved in from edge */
-            .otter-2 { width: 140px; left: 30px; }
-            .otter-3 { width: 110px; left: 180px; }
-            .otter-4 { width: 115px; right: 140px; }
-            .otter-5 { width: 130px; right: 80px; }
-            .otter-6 { width: 125px; left: 160px; }
-            .otter-7 { width: 145px; right: 60px; }
-            .otter-8 { width: 120px; right: 10px; } /* moved in from edge */
-            .otter-9 { width: 135px; }
-            .otter-10 { width: 125px; right: 100px; }
-            .otter-11 { width: 120px; left: 120px; }
+            .otter-1 { width: 80px; bottom: 10px; } /* moved in from edge */
+            .otter-2 { width: 80px; }
+            .otter-3 { width: 80px; bottom: 10px; }
+            .otter-4 { width: 80px; bottom: 10px; }
+            .otter-5 { width: 80px; bottom: 10px; }
+            .otter-6 { width: 80px; }
+            .otter-7 { width: 80px; }
+            .otter-8 { width: 80px; bottom: 10px; } /* moved in from edge */
+            .otter-9 { width: 80px; bottom: 10px}
+            .otter-10 { width: 80px; bottom: 10px}
+            .otter-11 { width: 80px; bottom: 10px}
         }
         
         @media (max-width: 480px) {
-            .title {
-                font-size: 1.5rem;
+            .main-title {
+                font-size: 2rem !important;
+                padding: 1rem 2rem !important;
+                margin-bottom: 1.5rem;
+            }
+            
+            .otter-prompt {
+                font-size: 0.9rem;
                 margin-bottom: 1rem;
             }
             
+            .counter-text {
+                font-size: 1rem;
+                min-width: 80px;
+            }
+            
             /* Extra small mobile otter sizing and positioning - ensure all fit */
-            .otter-1 { width: 90px; left: 5px; } /* moved in from edge */
-            .otter-2 { width: 100px; left: 20px; }
-            .otter-3 { width: 85px; left: 120px; }
-            .otter-4 { width: 90px; right: 90px; }
-            .otter-5 { width: 95px; right: 50px; }
-            .otter-6 { width: 95px; left: 100px; }
-            .otter-7 { width: 110px; right: 40px; }
-            .otter-8 { width: 90px; right: 5px; } /* moved in from edge */
-            .otter-9 { width: 100px; }
-            .otter-10 { width: 95px; right: 70px; }
-            .otter-11 { width: 90px; left: 50px; }
+            .otter-1 { width: 70px; bottom: 10px;} /* moved in from edge */
+            .otter-2 { width: 70px; }
+            .otter-3 { width: 70px; bottom: 10px;}
+            .otter-4 { width: 70px; bottom: 10px;}
+            .otter-5 { width: 70px; bottom: 10px;}
+            .otter-6 { width: 70px; }
+            .otter-7 { width: 70px; }
+            .otter-8 { width: 70px; bottom: 10px;} /* moved in from edge */
+            .otter-9 { width: 70px; bottom: 10px;}
+            .otter-10 { width: 70px; bottom: 10px;}
+            .otter-11 { width: 70px; bottom: 10px;}
         }
         
         @media (max-width: 360px) {
             /* Ultra small mobile - further reduce sizes and adjust positions */
-            .otter-1 { width: 70px; left: 2px; }
-            .otter-2 { width: 80px; left: 15px; }
-            .otter-3 { width: 65px; left: 90px; }
-            .otter-4 { width: 70px; right: 70px; }
-            .otter-5 { width: 75px; right: 40px; }
-            .otter-6 { width: 75px; left: 80px; }
-            .otter-7 { width: 85px; right: 30px; }
-            .otter-8 { width: 70px; right: 2px; }
-            .otter-9 { width: 80px; }
-            .otter-10 { width: 75px; right: 50px; }
-            .otter-11 { width: 70px; left: 35px; }
+            .otter-1 { width: 40px; bottom: 3px; }
+            .otter-2 { width: 40px; }
+            .otter-3 { width: 40px; bottom: 3px; }
+            .otter-4 { width: 40px; bottom: 3px; }
+            .otter-5 { width: 40px; bottom: 3px; }
+            .otter-6 { width: 40px; }
+            .otter-7 { width: 40px; }
+            .otter-8 { width: 40px; bottom: 3px; }
+            .otter-9 { width: 40px; bottom: 3px; }
+            .otter-10 { width: 40px; bottom: 3px; }
+            .otter-11 { width: 40px; bottom: 3px; }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -318,15 +332,15 @@
 </head>
 <body>
     <div class="main-container">
-        <h1 class="title">Greet Sky's Otter Friends!</h1>
+        <button class="hi-sky-btn main-title" onclick="goToMainPage()">Enter Sky's Personal Website</button>
+        
+        <p class="otter-prompt">But otter first maybe?</p>
         
         <div class="counter-section">
             <button class="counter-btn" id="minus-btn" onclick="decrementOtters()">-</button>
-            <div class="counter-display" id="counter-display">0 otters</div>
+            <div class="counter-text" id="counter-display">0 otters</div>
             <button class="counter-btn" id="plus-btn" onclick="incrementOtters()">+</button>
         </div>
-        
-        <button class="hi-sky-btn" onclick="goToMainPage()">Hi Sky!</button>
     </div>
     
     <!-- Otter images (hidden initially) -->
