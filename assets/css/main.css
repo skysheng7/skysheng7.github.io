@@ -198,8 +198,8 @@ a:hover {
     border-bottom: none;
 }
 
-/* Publication specific flexbox layout */
-.publication-item {
+/* Publication specific flexbox layout - only for research publications with images */
+.publication-item.with-image {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
@@ -229,6 +229,17 @@ a:hover {
 .publication-image img:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove underline from image links and ensure proper cursor */
+.publication-image a {
+    border: none;
+    text-decoration: none;
+    display: block;
+}
+
+.publication-image a:hover {
+    border: none;
 }
 
 .publication-title,
@@ -480,10 +491,32 @@ a:hover {
     font-style: italic;
 }
 
+/* Ensure links in talk venues are underlined */
+.talk-venue a {
+    color: #333;
+    text-decoration: underline;
+    border-bottom: 1px solid #ddd;
+}
+
+.talk-venue a:hover {
+    border-bottom-color: #333;
+}
+
 .talk-description {
     margin-top: 0.5rem;
     color: #555;
     font-size: 0.95rem;
+}
+
+/* Ensure links in talk descriptions are underlined */
+.talk-description a {
+    color: #333;
+    text-decoration: underline;
+    border-bottom: 1px solid #ddd;
+}
+
+.talk-description a:hover {
+    border-bottom-color: #333;
 }
 
 /* Social Links */
@@ -546,7 +579,7 @@ a:hover {
     }
     
     /* Responsive publication layout */
-    .publication-item {
+    .publication-item.with-image {
         flex-direction: column;
         gap: 1rem;
     }
