@@ -107,6 +107,22 @@ a:hover {
     object-fit: contain;
 }
 
+/* Responsive icon sizing */
+@media (max-width: 768px) {
+    .border-icon {
+        width: 35px;
+        height: 35px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .border-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 .site-nav ul {
     list-style: none;
     display: flex;
