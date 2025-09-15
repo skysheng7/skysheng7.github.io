@@ -188,7 +188,7 @@
         
         .message {
             position: absolute;
-            top: 50%;
+            top: 72%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 2rem;
@@ -263,18 +263,18 @@
                 padding: 0.75rem 1.5rem;
             }
             
-            /* Mobile otter sizing - still varied but smaller */
-            .otter-1 { width: 120px; }
-            .otter-2 { width: 140px; }
-            .otter-3 { width: 110px; }
-            .otter-4 { width: 115px; right: 180px; }
-            .otter-5 { width: 130px; }
-            .otter-6 { width: 125px; left: 200px; }
-            .otter-7 { width: 145px; }
-            .otter-8 { width: 120px; }
+            /* Mobile otter sizing and positioning - keep varied but ensure visibility */
+            .otter-1 { width: 120px; left: 10px; } /* moved in from edge */
+            .otter-2 { width: 140px; left: 30px; }
+            .otter-3 { width: 110px; left: 180px; }
+            .otter-4 { width: 115px; right: 140px; }
+            .otter-5 { width: 130px; right: 80px; }
+            .otter-6 { width: 125px; left: 160px; }
+            .otter-7 { width: 145px; right: 60px; }
+            .otter-8 { width: 120px; right: 10px; } /* moved in from edge */
             .otter-9 { width: 135px; }
-            .otter-10 { width: 125px; right: 150px; }
-            .otter-11 { width: 120px; left: 80px; }
+            .otter-10 { width: 125px; right: 100px; }
+            .otter-11 { width: 120px; left: 120px; }
         }
         
         @media (max-width: 480px) {
@@ -283,18 +283,33 @@
                 margin-bottom: 1rem;
             }
             
-            /* Extra small mobile otter sizing */
-            .otter-1 { width: 90px; }
-            .otter-2 { width: 100px; }
-            .otter-3 { width: 85px; left: 150px; }
-            .otter-4 { width: 90px; right: 120px; }
-            .otter-5 { width: 95px; }
-            .otter-6 { width: 95px; left: 120px; }
-            .otter-7 { width: 110px; }
-            .otter-8 { width: 90px; right: 80px; }
+            /* Extra small mobile otter sizing and positioning - ensure all fit */
+            .otter-1 { width: 90px; left: 5px; } /* moved in from edge */
+            .otter-2 { width: 100px; left: 20px; }
+            .otter-3 { width: 85px; left: 120px; }
+            .otter-4 { width: 90px; right: 90px; }
+            .otter-5 { width: 95px; right: 50px; }
+            .otter-6 { width: 95px; left: 100px; }
+            .otter-7 { width: 110px; right: 40px; }
+            .otter-8 { width: 90px; right: 5px; } /* moved in from edge */
             .otter-9 { width: 100px; }
-            .otter-10 { width: 95px; right: 100px; }
-            .otter-11 { width: 90px; left: 60px; }
+            .otter-10 { width: 95px; right: 70px; }
+            .otter-11 { width: 90px; left: 50px; }
+        }
+        
+        @media (max-width: 360px) {
+            /* Ultra small mobile - further reduce sizes and adjust positions */
+            .otter-1 { width: 70px; left: 2px; }
+            .otter-2 { width: 80px; left: 15px; }
+            .otter-3 { width: 65px; left: 90px; }
+            .otter-4 { width: 70px; right: 70px; }
+            .otter-5 { width: 75px; right: 40px; }
+            .otter-6 { width: 75px; left: 80px; }
+            .otter-7 { width: 85px; right: 30px; }
+            .otter-8 { width: 70px; right: 2px; }
+            .otter-9 { width: 80px; }
+            .otter-10 { width: 75px; right: 50px; }
+            .otter-11 { width: 70px; left: 35px; }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
