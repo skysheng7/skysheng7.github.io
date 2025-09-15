@@ -191,14 +191,18 @@ a:hover {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #f0f0f0;
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
 }
 
 .publication-item:last-child,
 .project-item:last-child {
     border-bottom: none;
+}
+
+/* Publication specific flexbox layout */
+.publication-item {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
 /* Publication content and image layout */
