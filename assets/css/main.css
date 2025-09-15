@@ -99,7 +99,7 @@ a:hover {
 
 .border-icon {
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     right: 10%;
     transform: translateX(-50%);
     width: 60px;
