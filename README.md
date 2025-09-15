@@ -4,7 +4,7 @@ A clean, professional personal website showcasing my work in data science, AI ap
 
 ## 🌟 Features
 
-- **Clean, minimal design** inspired by [Rida Qadri's website](https://ridaqadri.net/)
+- **Clean, minimal design** inspired by [Rida Qadri's website](https://ridaqadri.net/), [Nina Panickssery's website](https://ninapanickssery.com/), and [Daniel's website](https://ddaniel.dev/)
 - **Responsive layout** that works on all devices
 - **Academic focus** with sections for research, projects, speaking, and contact
 - **Year-organized content** for talks and presentations
