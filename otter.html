@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greet Sky's Otter Friends! - Sky Sheng</title>
+    <meta name="description" content="You can greet Sky's otter friends here. Sky Sheng - AI fairnessresearcher and data scientist for animal welfare.">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif, Georgia;
+            background-color: #f8f9fa;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .main-title {
+            font-size: 2.5rem !important;
+            padding: 1.2rem 2.4rem !important;
+            margin-bottom: 2.5rem;
+        }
+        
+        .otter-prompt {
+            font-size: 1.2rem;
+            color: #666;
+            font-family: 'Crimson Text', serif;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .counter-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .counter-btn {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .counter-btn:hover:not(:disabled) {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .counter-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .counter-text {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 400;
+            min-width: 120px;
+            text-align: center;
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .hi-sky-btn {
+            background: #dfd0c2;
+            color: #333;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .hi-sky-btn:hover {
+            background: #af947b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .otter {
+            position: absolute;
+            transition: all 0.8s ease;
+            z-index: 5;
+        }
+        
+        /* Individual otter positioning - varied sizes and random edge placement */
+        .otter-1 {
+            width: 200px;
+            height: auto;
+            bottom: 0px;
+            left: 0px;
+        }
+        
+        .otter-2 {
+            width: 270px;
+            height: auto;
+            top: 50px;
+            left: 10px;
+        }
+        
+        .otter-3 {
+            width: 210px;
+            height: auto;
+            bottom: 0px;
+            left: 250px;
+        }
+        
+        .otter-4 {
+            width: 230px;
+            height: auto;
+            bottom: 0px;
+            right: 350px;
+        }
+        
+        .otter-5 {
+            width: 200px;
+            height: auto;
+            bottom: 0px;
+            right: 150px;
+        }
+        
+        .otter-6 {
+            width: 200px;
+            height: auto;
+            top: 0px;
+            left: 350px;
+        }
+        
+        .otter-7 {
+            width: 270px;
+            height: auto;
+            top: 20px;
+            right: 100px;
+        }
+        
+        .otter-8 {
+            width: 175px;
+            height: auto;
+            bottom: 0px;
+            right: 0px;
+        }
+        
+        .otter-9 {
+            width: 230px;
+            height: auto;
+            bottom: 0px;
+            left: 40%;
+            transform: translateX(-50%);
+        }
+        
+        .otter-10 {
+            width: 190px;
+            height: auto;
+            bottom: 200px;
+            right: 30px;
+        }
+        
+        .otter-11 {
+            width: 200px;
+            height: auto;
+            bottom: 250px;
+            left: 270px;
+        }
+        
+        .message {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 15;
+            display: none;
+        }
+        
+        /* Flying animation for otter 7 */
+        @keyframes flyInDiagonal {
+            0% {
+                bottom: -150px;
+                left: -150px;
+                top: auto;
+                right: auto;
+                transform: rotate(-15deg) scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+                transform: rotate(-10deg) scale(1);
+            }
+            100% {
+                bottom: auto;
+                left: auto;
+                top: 20px;
+                right: 100px;
+                transform: rotate(-5deg) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .otter-7.flying {
+            animation: flyInDiagonal 1s ease-out forwards;
+        }
+        
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem !important;
+                padding: 1.25rem 2.5rem !important;
+                margin-bottom: 2rem;
+            }
+            
+            .otter-prompt {
+                font-size: 1rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .counter-text {
+                font-size: 1.25rem;
+                min-width: 100px;
+            }
+            
+            .counter-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            
+            
+            /* Mobile otter positioning - proportional to desktop (768px ≈ 64% of desktop 1200px) */
+            .otter-1 { width: 80px; bottom: 80px; left: 0px; }
+            .otter-2 { width: 80px; top: 32px; left: 6px; }
+            .otter-3 { width: 80px; bottom: 80px; left: 100px; }
+            .otter-4 { width: 80px; bottom: 80px; right: 150px; }
+            .otter-5 { width: 80px; bottom: 80px; right: 70px; }
+            .otter-6 { width: 80px; top: 0px; left: 224px; }
+            .otter-7 { width: 80px; top: 10px; right: 60px; }
+            .otter-8 { width: 80px; bottom: 80px; right: 0px; }
+            .otter-9 { width: 80px; bottom: 80px; left: 30%; transform: translateX(-50%); }
+            .otter-10 { width: 80px; bottom: 228px; right: 15px; }
+            .otter-11 { width: 80px; bottom: 200px; left: 10px; }
+        }
+        
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2rem !important;
+                padding: 1rem 2rem !important;
+                margin-bottom: 1.5rem;
+            }
+            
+            .otter-prompt {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+            
+            .counter-text {
+                font-size: 1rem;
+                min-width: 80px;
+            }
+            
+            /* Small mobile otter positioning - proportional to desktop (480px ≈ 40% of desktop 1200px) */
+            .otter-1 { width: 70px; bottom: 80px; left: 0px; }
+            .otter-2 { width: 90px; top: 20px; left: 4px; }
+            .otter-3 { width: 70px; bottom: 80px; left: 80px; }
+            .otter-4 { width: 70px; bottom: 80px; right: 100px; }
+            .otter-5 { width: 70px; bottom: 80px; right: 45px; }
+            .otter-6 { width: 80px; top: 0px; left: 140px; }
+            .otter-7 { width: 70px; top: 8px; right: 10px; }
+            .otter-8 { width: 70px; bottom: 80px; right: 0px; }
+            .otter-9 { width: 70px; bottom: 80px; left:50%; transform: translateX(-50%); }
+            .otter-10 { width: 70px; bottom: 170px; right: 12px; }
+            .otter-11 { width: 70px; bottom: 185px; left: 50px; }
+        }
+        
+        @media (max-width: 360px) {
+            /* Ultra small mobile otter positioning - proportional to desktop (360px ≈ 30% of desktop 1200px) */
+            .otter-1 { width: 40px; bottom: 70px; left: 0px; }
+            .otter-2 { width: 40px; top: 15px; left: 3px; }
+            .otter-3 { width: 40px; bottom: 70px; left: 60px; }
+            .otter-4 { width: 40px; bottom: 70px; right: 105px; }
+            .otter-5 { width: 40px; bottom: 7px; right: 45px; }
+            .otter-6 { width: 40px; top: 0px; left: 105px; }
+            .otter-7 { width: 40px; top: 6px; right: 30px; }
+            .otter-8 { width: 40px; bottom: 70px; right: 0px; }
+            .otter-9 { width: 40px; bottom: 70px; left: 40%; transform: translateX(-50%); }
+            .otter-10 { width: 40px; bottom: 130px; right: 9px; }
+            .otter-11 { width: 40px; bottom: 145px; left: 81px; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <button class="hi-sky-btn main-title" onclick="goToMainPage()">Go to Sky's Website</button>
+        
+        <p class="otter-prompt">But greet the otters first maybe?</p>
+        
+        <div class="counter-section">
+            <button class="counter-btn" id="minus-btn" onclick="decrementOtters()">-</button>
+            <div class="counter-text" id="counter-display">0 otters</div>
+            <button class="counter-btn" id="plus-btn" onclick="incrementOtters()">+</button>
+        </div>
+    </div>
+    
+    <!-- Otter images (hidden initially) -->
+    <img src="images/1.png" alt="Otter waving hi" class="otter otter-1 hidden" id="otter-1">
+    <img src="images/2.png" alt="Otter floating on back" class="otter otter-2 hidden" id="otter-2">
+    <img src="images/3.png" alt="Otter" class="otter otter-3 hidden" id="otter-3">
+    <img src="images/4.png" alt="Otter" class="otter otter-4 hidden" id="otter-4">
+    <img src="images/5.png" alt="Otter" class="otter otter-5 hidden" id="otter-5">
+    <img src="images/6.png" alt="Otter holding flower" class="otter otter-6 hidden" id="otter-6">
+    <img src="images/7.png" alt="Flying otter on broom" class="otter otter-7 hidden" id="otter-7">
+    <img src="images/8.png" alt="Otter holding volleyball" class="otter otter-8 hidden" id="otter-8">
+    <img src="images/9.png" alt="Otter reading book" class="otter otter-9 hidden" id="otter-9">
+    <img src="images/10.png" alt="Otter" class="otter otter-10 hidden" id="otter-10">
+    <img src="images/11.png" alt="Otter" class="otter otter-11 hidden" id="otter-11">
+    
+    <div class="message" id="message">Otter Overflow Detected!</div>
+
+    <script>
+        let currentOtterCount = 0;
+        const maxOtters = 11;
+        
+        function updateDisplay() {
+            const display = document.getElementById('counter-display');
+            const minusBtn = document.getElementById('minus-btn');
+            const plusBtn = document.getElementById('plus-btn');
+            const message = document.getElementById('message');
+            
+            display.textContent = `${currentOtterCount} otter${currentOtterCount === 1 ? '' : 's'}`;
+            
+            // Disable buttons as needed
+            minusBtn.disabled = currentOtterCount === 0;
+            plusBtn.disabled = currentOtterCount === maxOtters;
+            
+            // Show message when all otters are used up
+            if (currentOtterCount === maxOtters) {
+                message.style.display = 'block';
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 3000);
+            }
+        }
+        
+        function incrementOtters() {
+            if (currentOtterCount < maxOtters) {
+                currentOtterCount++;
+                showOtter(currentOtterCount);
+                updateDisplay();
+            }
+        }
+        
+        function decrementOtters() {
+            if (currentOtterCount > 0) {
+                hideOtter(currentOtterCount);
+                currentOtterCount--;
+                updateDisplay();
+            }
+        }
+        
+        function showOtter(otterNumber) {
+            const otter = document.getElementById(`otter-${otterNumber}`);
+            otter.classList.remove('hidden');
+            
+            // Special animation for otter 7 (flying otter)
+            if (otterNumber === 7) {
+                // Reset position for animation
+                otter.style.bottom = '-40px';
+                otter.style.left = '-150px';
+                otter.style.top = 'auto';
+                otter.style.right = 'auto';
+                otter.style.opacity = '0';
+                
+                setTimeout(() => {
+                    otter.classList.add('flying');
+                }, 100);
+            } else {
+                setTimeout(() => {
+                    otter.classList.add('visible');
+                }, 100);
+            }
+        }
+        
+        function hideOtter(otterNumber) {
+            const otter = document.getElementById(`otter-${otterNumber}`);
+            otter.classList.remove('visible', 'flying');
+            otter.classList.add('hidden');
+            
+            // Reset otter 7 position and properties immediately
+            if (otterNumber === 7) {
+                // Remove any inline styles that were set during animation
+                otter.style.bottom = '';
+                otter.style.left = '';
+                otter.style.top = '';
+                otter.style.right = '';
+                otter.style.opacity = '';
+                otter.style.transform = '';
+                otter.style.animation = '';
+                
+                // Force the hidden state
+                otter.style.opacity = '0';
+            }
+        }
+        
+        function goToMainPage() {
+            window.location.href = '/index';
+        }
+        
+        // Initialize display
+        updateDisplay();
+    </script>
+</body>
+</html>
