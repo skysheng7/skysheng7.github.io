@@ -1,8 +1,8 @@
-PWD /Users/skysheng/Desktop/github/skysheng7.github.io/cv_ms
+PWD /Users/skysheng/Desktop/github/skysheng7.github.io/cv_un copy
 INPUT /Users/skysheng/Library/TinyTeX/texmf.cnf
 INPUT /Users/skysheng/Library/TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /Users/skysheng/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/skysheng/Desktop/github/skysheng7.github.io/cv_ms/Sky_CV.tex
+INPUT /Users/skysheng/Desktop/github/skysheng7.github.io/cv_un copy/Sky_CV.tex
 OUTPUT Sky_CV.log
 INPUT /Users/skysheng/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 INPUT /Users/skysheng/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
