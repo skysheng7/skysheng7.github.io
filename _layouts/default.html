@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Kehan Sheng</title>
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-    <meta name="keywords" content="Sky Sheng, Kehan Sheng, AI bias, AI researcher, data scientist, UBC PhD, animal welfare, machine learning, Vancouver, data science, AI applications">
+    <meta name="description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta name="keywords"
+        content="Sky Sheng, Kehan Sheng, AI bias, AI researcher, data scientist, UBC PhD, animal welfare, machine learning, Vancouver, data science, AI applications">
     <meta name="author" content="{{ site.author.name }}">
     <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Sky Kehan Sheng">
-    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta property="og:description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <meta property="og:image" content="{{ '/sky.jpg' | prepend: site.url }}">
     <meta property="og:url" content="{{ page.url | prepend: site.url }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.title }}">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sky Kehan Sheng">
-    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta name="twitter:description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <meta name="twitter:image" content="{{ '/sky.jpg' | prepend: site.url }}">
-    
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -51,18 +56,21 @@
         ]
     }
     </script>
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="site-header">
         <div class="container">
@@ -75,21 +83,28 @@
                     <span class="typewriter-cursor" id="cursor">|</span>
                 </div>
             </div>
-            
+
             <nav class="site-nav">
                 <ul>
-                    <li><a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research' %}class="current"{% endif %}>Research</a></li>
-                    <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="current"{% endif %}>Projects</a></li>
-                    <li><a href="{{ '/teaching/' | relative_url }}" {% if page.url contains '/teaching' %}class="current"{% endif %}>Teaching</a></li>
-                    <li><a href="{{ '/speaking/' | relative_url }}" {% if page.url contains '/speaking' %}class="current"{% endif %}>Speaking</a></li>
-                    <li><a href="{{ '/awards/' | relative_url }}" {% if page.url contains '/awards' %}class="current"{% endif %}>Awards</a></li>
-                    <li><a href="{{ '/cv/' | relative_url }}" {% if page.url contains '/cv' %}class="current"{% endif %}>CV</a></li>    
-                    <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="current"{% endif %}>Contact</a></li>
+                    <li><a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research'
+                            %}class="current" {% endif %}>Research</a></li>
+                    <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects'
+                            %}class="current" {% endif %}>Projects</a></li>
+                    <li><a href="{{ '/teaching/' | relative_url }}" {% if page.url contains '/teaching'
+                            %}class="current" {% endif %}>Teaching</a></li>
+                    <li><a href="{{ '/speaking/' | relative_url }}" {% if page.url contains '/speaking'
+                            %}class="current" {% endif %}>Speaking</a></li>
+                    <li><a href="{{ '/awards/' | relative_url }}" {% if page.url contains '/awards' %}class="current" {%
+                            endif %}>Awards</a></li>
+                    <!-- <li><a href="{{ '/cv/' | relative_url }}" {% if page.url contains '/cv' %}class="current"{% endif %}>CV</a></li> -->
+                    <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="current"
+                            {% endif %}>Contact</a></li>
                 </ul>
             </nav>
         </div>
         <a href="{{ '/index.html' | relative_url }}" title="Visit the otter page!">
-            <img src="{{ '/images/12.png' | relative_url }}" alt="Decorative icon - Click to visit otter page!" class="border-icon">
+            <img src="{{ '/images/12.png' | relative_url }}" alt="Decorative icon - Click to visit otter page!"
+                class="border-icon">
         </a>
     </header>
 
@@ -106,69 +121,70 @@
     </footer>
 
     <script>
-    // Typewriter animation script
-    const typewriter = document.getElementById('typewriter');
-    const cursor = document.getElementById('cursor');
+        // Typewriter animation script
+        const typewriter = document.getElementById('typewriter');
+        const cursor = document.getElementById('cursor');
 
-    const titles = [
-        'Who Am I?',
-        'AI Fairness Researcher',
-        'Data Scientist for Animal Welfare',
-        'PhD Candidate @ UBC AWP',
-        'Sessional Lecturer @ UBC MDS',
-        'Research Collaborator @ UBC TrustML'
-    ];
+        const titles = [
+            'Who Am I?',
+            'AI Fairness Researcher',
+            'Data Scientist for Animal Welfare',
+            'PhD Candidate @ UBC AWP',
+            'Sessional Lecturer @ UBC MDS',
+            'Research Collaborator @ UBC TrustML'
+        ];
 
-    let titleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let isPaused = false;
+        let titleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isPaused = false;
 
-    function typeWriter() {
-        const currentTitle = titles[titleIndex];
-        
-        if (isPaused) {
-            setTimeout(typeWriter, 2000); // Pause for 2 seconds
-            isPaused = false;
-            return;
-        }
-        
-        if (isDeleting) {
-            typewriter.textContent = currentTitle.substring(0, charIndex - 1);
-            charIndex--;
-            
-            if (charIndex === 0) {
-                isDeleting = false;
-                titleIndex = (titleIndex + 1) % titles.length;
-                setTimeout(typeWriter, 500); // Pause before typing next
+        function typeWriter() {
+            const currentTitle = titles[titleIndex];
+
+            if (isPaused) {
+                setTimeout(typeWriter, 2000); // Pause for 2 seconds
+                isPaused = false;
                 return;
             }
-        } else {
-            typewriter.textContent = currentTitle.substring(0, charIndex + 1);
-            charIndex++;
-            
-            if (charIndex === currentTitle.length) {
-                isPaused = true;
-                isDeleting = true;
+
+            if (isDeleting) {
+                typewriter.textContent = currentTitle.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    titleIndex = (titleIndex + 1) % titles.length;
+                    setTimeout(typeWriter, 500); // Pause before typing next
+                    return;
+                }
+            } else {
+                typewriter.textContent = currentTitle.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === currentTitle.length) {
+                    isPaused = true;
+                    isDeleting = true;
+                }
             }
-        }
-        
-        const speed = isDeleting ? 10 : 40;
-        setTimeout(typeWriter, speed);
-    }
 
-    // Blinking cursor animation
-    function blinkCursor() {
-        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-    }
-
-    // Start animations
-    document.addEventListener('DOMContentLoaded', function() {
-        if (typewriter && cursor) {
-            setTimeout(typeWriter, 1000); // Start after 1 second
-            setInterval(blinkCursor, 530); // Cursor blinks every 530ms
+            const speed = isDeleting ? 10 : 40;
+            setTimeout(typeWriter, speed);
         }
-    });
+
+        // Blinking cursor animation
+        function blinkCursor() {
+            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+        }
+
+        // Start animations
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typewriter && cursor) {
+                setTimeout(typeWriter, 1000); // Start after 1 second
+                setInterval(blinkCursor, 530); // Cursor blinks every 530ms
+            }
+        });
     </script>
 </body>
-</html> 
+
+</html>
